@@ -54,5 +54,6 @@ extra:
       link: https://sitename.example
     - icon: simple/linkedin
       link: https://sitename.example
+  generator: false
 
 copyright: Copyright &copy; 2024 Arcabidi
