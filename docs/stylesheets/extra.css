@@ -1,0 +1,8 @@
+/* Default, light theme
+.md-nav__item:hover {
+  background-color: #4cae4f;
+}*/
+
+.mermaid {
+  text-align: center;
+}
