@@ -6,6 +6,8 @@
     
 ## Scripting
 
+All code files below are located at `Assets/_Project/Scripting/Systems/11 - Hitbox`.
+
 ### Enums
 
 ``` mermaid
@@ -19,6 +21,8 @@ classDiagram
 ```
 
 ### MonoBehaviours
+
+These scripts are meant to be attached to GameObjects in the scene as components and inherit from Unity's [MonoBehaviour](https://docs.unity3d.com/6000.0/Documentation/Manual/class-MonoBehaviour.html) class.
 
 #### Hitboxes
 

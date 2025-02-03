@@ -8,6 +8,8 @@
 
 ### CSharp
 
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
+
 #### ActionWrapper
 
 ``` mermaid
@@ -142,6 +144,8 @@ classDiagram
 ```
 
 ### MonoBehaviours
+
+These scripts are meant to be attached to GameObjects in the scene as components and inherit from Unity's [MonoBehaviour](https://docs.unity3d.com/6000.0/Documentation/Manual/class-MonoBehaviour.html) class.
 
 #### CycleSpriteOnEnable
 

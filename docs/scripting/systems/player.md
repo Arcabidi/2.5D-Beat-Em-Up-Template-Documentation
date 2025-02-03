@@ -14,11 +14,15 @@ Unity's local player system is managed through their Input System package by a c
 
 For this template we have opted not to use Unity's default Player Input Manager component. This is because the default component only allows us to define one prefab for Players when we want our Player system to be able to create different prefabs for humans and AIs.
 
-We have created our own custom Player managers for this purpose. Virtual devices are created for AI players so that their inputs can be handled the same way as human players. See the [PlayerManagers](#playermanagers) section below for more information. 
+We have created our own [custom PlayerManagers](#playermanagers) for this purpose. Virtual devices are created for AI players so that their inputs can be handled the same way as human players.
 
 ## Scripting
 
+All code files below are located at `Assets/_Project/Scripting/Systems/02 - Player`.
+
 ### CSharp
+
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
 
 #### HumanPlayerEvents
 
@@ -29,7 +33,7 @@ classDiagram
     }
 ```
 
-`HumanPlayerEvents.cs` contains all events related to human players. Events in this class are invoked to signal when they occur. This includes things like joining the game, pressing any key, clicking, or toggling pause.
+`HumanPlayerEvents.cs` contains all events related to human players. This includes things like joining the game, pressing any key, clicking, or toggling pause.
 
 #### Players
 
@@ -38,13 +42,15 @@ classDiagram
     Player <|-- AIPlayer
 ```
 
-Players represent entites capable of playing the game by giving it inputs.
+Players represent entites capable of playing the game by giving it inputs. This includes both human players and AI players.
 
 `Player.cs` defines what is common across all players regardless of game or whether they are human or AI. This includes things like having an assigned ID and a reference to their assigned PlayerInput component.
 
 `AIPlayer.cs` defines what is unique to AI players, regardless of game. This includes a reference to the AI component that controls their logic.
 
 ### MonoBehaviours
+
+These scripts are meant to be attached to GameObjects in the scene as components and inherit from Unity's [MonoBehaviour](https://docs.unity3d.com/6000.0/Documentation/Manual/class-MonoBehaviour.html) class.
 
 #### AIs
 
@@ -53,11 +59,11 @@ classDiagram
     AI <|-- BasicEnemyAI
 ```
 
-AIs are components attached to AIPlayer prefabs that determine how the AI plays the game.
+AIs are components attached to AIPlayer prefabs that determine how they play the game.
 
-`AI.cs` defines what is common across all AI, regardless of game and whether they are enemies or allies. This includes assigning its PlayerInput and UnitController components.
+`AI.cs` defines what is common across all AI regardless of game and whether they are enemies or allies. This includes things like assigning its PlayerInput and UnitController components.
 
-`BasicEnemyAI.cs` represents a basic enemy AI that moves to the closest human player unit and performs a basic attack. This component can be found attached to AIPlayer prefab. These prefabs are instantiated as children of the AIPlayerManager GameObject in the Training scene at runtime.
+`BasicEnemyAI.cs` represents a basic enemy AI that moves to the closest human player unit and performs a basic attack. It repeats this behaviour until it is defeated. This component can be found attached to AIPlayer prefab. These prefabs are instantiated as children of the AIPlayerManager GameObject in the Training scene at runtime.
 
 #### HumanPlayerControllers
 
@@ -67,7 +73,7 @@ classDiagram
     }
 ```
 
-HumanPlayerControllers are scripts attached to HumanPlayer prefabs that determine what HumanPlayerEvents are invoked when that human player performs a specific input action.
+HumanPlayerControllers determine what HumanPlayerEvents are invoked when that human player performs a specific input action.
 
 `HumanPlayerController.cs` represents a basic human player controller. This component can be found attached to the HumanPlayer prefab. These prefabs are instantiated as children of the HumanPlayerManager GameObject in the Persistent scene at runtime.
 
@@ -88,10 +94,10 @@ classDiagram
 
 PlayerManagers are custom scripts that manage human and AI players, replacing Unity's default Player Input Manager component.
 
-`PlayerManager.cs` defines what is common across all PlayerManagers, regardless of game. This includes things like maintaining a data structure for the players and defining the maximum player count. 
+`PlayerManager.cs` defines what is common across all PlayerManagers, regardless of game. This includes things like maintaining a data structure for the players and defining the maximum number of players it can managae.
 
 `HumanPlayerManager.cs` defines what is common across all PlayerManagers that manage only humans. This includes detecting the usage of unpaired devices and adding a new human player. This component can be found attached to the HumanPlayerManager GameObject in the Persistent scene.
 
 `AIPlayerManager.cs` defines what is common across all PlayerManagers that manage only AI. This includes creating virtual devices for AI players to use when adding them.
 
-`TrainingAIPlayerManager.cs` defines the AIPlayerManager behaviour at the training level. This includes spawning AI player units on Awake() and stopping them when the stage is lost. This component can be found attached to the AIPlayerManager GameObject in the Training scene.
+`TrainingAIPlayerManager.cs` defines AIPlayerManager behaviour unique to the Training scene. This includes spawning AI player units on Awake() and stopping them when the stage is lost. This component can be found attached to the AIPlayerManager GameObject in the Training scene.

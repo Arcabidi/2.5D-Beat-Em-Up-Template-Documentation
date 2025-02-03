@@ -8,6 +8,8 @@ This project uses Unity's built-in animation system, known as the [Mecanim Anima
 
 ## Scripting
 
+All code files below are located at `Assets/_Project/Scripting/Systems/08 - Animation`.
+
 ### StateMachineBehaviours
 
 #### BoolClearedBy
