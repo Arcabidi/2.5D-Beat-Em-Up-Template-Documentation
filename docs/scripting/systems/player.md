@@ -6,6 +6,10 @@
 
 ## Design decisions
 
+This template makes the following design decisions regarding the default way Unity handles players:
+
+### Player system
+
 Unity's local player system is managed through their Input System package by a component called the Player Input Manager. It automatically manages the creation and lifetime of PlayerInput instances as players join and leave the game.
 
 <figure markdown="span">

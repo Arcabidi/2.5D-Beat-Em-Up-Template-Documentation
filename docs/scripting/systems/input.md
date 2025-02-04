@@ -6,13 +6,17 @@
     
 ## Design decisions
 
+This template makes the following design decisions regarding the default way Unity handles input:
+
+### Input system
+
 Unity’s legacy input system is called the Input Manager. It is built into the Editor and is part of the core Unity platform. It is enabled by default.
+
+In 2020 Unity released a new input system called the Input System Package. It is more flexible than the basic Input Manager as it allows any kind of Input Device to control Unity content. It must be installed manually through the Package Manager, after which it can either deactivate the older Input Manager or work alongside it.
 
 !!! Warning
 
     Unity currently recommends using the new Input System package since they plan on removing the legacy Input Manager in the future.
-
-In 2020 Unity released a new input system called the Input System Package. It is more flexible than the basic Input Manager as it allows any kind of Input Device to control Unity content. It must be installed manually through the Package Manager, after which it can either deactivate the older Input Manager or work alongside it.
 
 <figure markdown="span">
     ![input_system_package_1.png](../../assets/images/input_system_package_1.png)
@@ -49,6 +53,8 @@ InputEvents contain all events related to input.
 `TitleInputEvents.cs` contains all events related to input on the title screen. This includes things like notifying other classes when the keybinding process has started or completed.
 
 ### Enums
+
+These scripts contain groups of related constants that are meant to be used by other scripts. All classes in these folders use the `enum` keyword in their declaration.
 
 #### ActionMap
 
@@ -96,6 +102,8 @@ InputActionMapControllers control the behaviour of PlayerInput action maps withi
 All non-code files below are located at `Assets/_Project/Unity/Input`.
 
 ### InputSystem
+
+These non-code files are located in the `InputSystem` subfolder.
 
 #### InputActionAsset
 
