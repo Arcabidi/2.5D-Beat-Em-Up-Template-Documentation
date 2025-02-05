@@ -264,7 +264,14 @@ This template only uses one font: [`PressStart2P-Regular.ttf`](https://fonts.goo
 
 #### ThemeStyleSheets
 
-[ThemeStyleSheet](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-tss.html) files 
+ [ThemeStyleSheet](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-tss.html) files are USS files that Unity uses for management purposes. They are referenced by PanelSettings assets and applied to their panels.
+
+`UnityDefaultRuntimeTheme.tss` is the default ThemeStyleSheet that is automatically created by Unity when the first UIDocument is added to a GameObject.
 
 #### VisualTrees
 
+[VisualTree](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-VisualTree.html) files depict hierarchy relationships between VisualElements. They can represent scenes, screens, or even custom VisualElements themselves. VisualTrees are created via `Assets > Create > UI Toolkit > UI Document`.
+
+When a VisualTree is created in UIBuilder, it automatically generates the underlying [Unity Extensible Markup Language (UXML)](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-USS.html) and [UnityStyleSheet (USS)](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-USS.html) code while providing a preview for reference. UXML and USS are UIToolkit equivalents to HTML and CSS and have a similar relationship.
+
+VisualTrees representing entire scenes are referenced by the UIDocument component on the UIManager GameObject in the Persistent, Boot, TItle, and Training scenes.

@@ -19,3 +19,7 @@ classDiagram
     class BackgroundManager{
     }
 ```
+
+BackgroundManagers manage GameObjects that make up the background of a scene. This includes things like setting them active or inactive as needed.
+
+`BackgroundManager.cs` manages the background GameObjects of the Title scene. It toggles its child GameObjects accordingly between the MainMenu and Options screens.
