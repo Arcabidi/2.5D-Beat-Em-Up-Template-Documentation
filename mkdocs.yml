@@ -49,6 +49,7 @@ nav:
       - Animation: scripting/systems/animation.md
       - Action: scripting/systems/action.md
       - Command: scripting/systems/command.md
+      - Ability: scripting/systems/ability.md
       - Hitbox: scripting/systems/hitbox.md
     - Utilities: scripting/utilities.md
 
