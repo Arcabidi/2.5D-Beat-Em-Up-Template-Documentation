@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This section summarizes all aspects of the animation system, which is responsible for bringing GameObjects in the scene to life.
+    This page summarizes all aspects of the animation system, which is responsible for bringing GameObjects in the scene to life.
 
 ## Design decisions
 
@@ -10,27 +10,53 @@ This template makes the following design decisions regarding the default way Uni
 
 ### Animation system
 
-This project uses Unity's built-in animation system, known as the [Mecanim Animation system](https://docs.unity3d.com/Manual/AnimationOverview.html), to bring its in-game units to life.
+This project uses Unity's default built-in animation system, known as the [Mecanim Animation system](https://docs.unity3d.com/Manual/AnimationOverview.html), to bring its in-game units to life.
 
-## Animation
+<figure markdown="span">
+    ![animation_system.png](../../assets/images/animation_system.png)
+</figure>
 
-All non-code files below are located at `Assets/_Project/Animation`.
+## Animation folder
+
+The non-code files in this section are at `Assets/_Project/Animation`.
+
+<figure markdown="span">
+    ![animation_animation_folder.png](../../assets/images/animation_animation_folder.png)
+</figure>
 
 ### MecanimAnimation
 
+The non-code files in this section are in the `MecanimAnimation` subfolder.
+
 #### AnimationClips
+
+<figure markdown="span">
+    ![animationclips.png](../../assets/images/animationclips.png)
+</figure>
+
+[AnimationClips](https://docs.unity3d.com/Manual/AnimationClips.html) are imported from an external source or created within Unity. They are then placed and arranged in an AnimatorController.
 
 #### AnimatorControllers
 
-AnimatorControllers are state machines that decide what AnimationClip to play. They are referenced by a unit's Animator component. 
+<figure markdown="span">
+    ![animatorcontrollers.png](../../assets/images/animatorcontrollers.png)
+</figure>
 
-## Scripting
+[AnimatorControllers](https://docs.unity3d.com/Manual/class-AnimatorController.html) use state machines to determine what [AnimationClip](https://docs.unity3d.com/Manual/AnimationClips.html) to play. They are referenced by the [Animator](https://docs.unity3d.com/Manual/class-Animator.html) components on the Hero and Villain prefabs. 
 
-All code files below are located at `Assets/_Project/Scripting/Systems/08 - Animation`.
+## Scripting folder
+
+The code files in this section are at `Assets/_Project/Scripting/Systems/08 - Animation`.
+
+<figure markdown="span">
+    ![animation_scripting.png](../../assets/images/animation_scripting.png)
+</figure>
 
 ### StateMachineBehaviours
 
-#### BoolClearedBy
+These scripts are components that can be added to a state machine state. All classes in this folder derive from Unity's base [StateMachineBehaviour](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/StateMachineBehaviour.html) class.
+
+#### BoolClearedByIPauseAnimatorUnpauseAnimator
 
 ``` mermaid
 classDiagram
@@ -38,54 +64,139 @@ classDiagram
     }
 ```
 
-#### BoolSetBy
+`BoolClearedByIPauseAnimatorUnpauseAnimator.cs` defines a bool parameter to be cleared if the UnpauseAnimator event is fired by a specific [IPauseAnimator](../utilities.md#ipauseanimator) interface implementation.
+
+#### BoolSetByAbility
 
 ``` mermaid
 classDiagram
     class BoolSetByAbility{
     }
+```
+
+`BoolSetByAbility.cs` define a bool parameter to be set if the SetAnimationBool event is fired by a specific [IRaiseSetAnimationBool](../utilities.md#iraisesetanimationbool) interface implementation. It also listens for when new abilities are added via a unit's [AbilityResponder](ability.md#abilityresponders).
+
+#### BoolSetByIDamageableDamaged
+
+``` mermaid
+classDiagram
     class BoolSetByIDamageableDamaged{
     }
+```
+
+`BoolSetByIDamageableDamaged.cs` defines a bool parameter to be set if the Damaged event is fired by a specific [IDamageable](../utilities.md#idamageable) interface implementation.
+
+#### BoolSetByIDamageableDamagedBack
+
+``` mermaid
+classDiagram
     class BoolSetByIDamageableDamagedBack{
     }
 ```
+
+`BoolSetByIDamageableDamagedBack.cs` defines a bool parameter to be set if the DamagedBack event is fired by a specific [IDamageable](../utilities.md#idamageable) interface implementation.
+
+#### BoolSetByIDefeatableDefeated
+
 ``` mermaid
 classDiagram
     class BoolSetByIDefeatableDefeated{
     }
+```
+
+`BoolSetByIDefeatableDefeated.cs` defines a bool parameter to be set if the Defeated event is fired by a specific [IDefeatable](../utilities.md#idefeatable) interface implementation.
+
+#### BoolSetByIDefeatableDefeatedBack
+
+``` mermaid
+classDiagram
     class BoolSetByIDefeatableDefeatedBack{
     }
+```
+
+`BoolSetByIDefeatableDefeatedBack.cs` defines a bool parameter to be set if the DefeatedBack event is fired by a specific [IDefeatable](../utilities.md#idefeatable) interface implementation.
+
+#### BoolSetByIPauseAnimatorPauseAnimator
+
+``` mermaid
+classDiagram
     class BoolSetByIPauseAnimatorPauseAnimator{
     }
 ```
+
+`BoolSetByIPauseAnimatorPauseAnimator.cs` defines a bool parameter to be set if the PauseAnimator event is fired by a specific [IPauseAnimator](../utilities.md#ipauseanimator) interface implementation.
+
+#### BoolSetByIRaiseMoveExecutedMovement
+
 ``` mermaid
 classDiagram
     class BoolSetByIRaiseMoveExecutedMovement{
     }
+```
+
+`BoolSetByIRaiseMoveExecutedMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a non-zero vector by a specific [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+
+#### BoolSetByIRaiseMoveExecutedNoMovement
+
+``` mermaid
+classDiagram
     class BoolSetByIRaiseMoveExecutedNoMovement{
     }
+```
+
+`BoolSetByIRaiseMoveExecutedNoMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a zero vector by a specific [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+
+#### BoolSetByIRaiseMoveExecutedNonPositiveYMovement
+
+``` mermaid
+classDiagram
     class BoolSetByIRaiseMoveExecutedNonPositiveYMovement{
     }
 ```
+
+`BoolSetByIRaiseMoveExecutedNonPositiveYMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a non-positive y-vector by a specific [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+
+#### BoolSetByIRaiseMoveExecutedPositiveYMovement
+
 ``` mermaid
 classDiagram
     class BoolSetByIRaiseMoveExecutedPositiveYMovement{
     }
+```
+
+`BoolSetByIRaiseMoveExecutedPositiveYMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a positive y-vector by a specific [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+
+#### BoolSetByIRaiseWonWon
+
+``` mermaid
+classDiagram
     class BoolSetByIRaiseWonWon{
     }
 ```
 
-#### BoolSetOn
+`BoolSetByIRaiseWonWon.cs` define a bool parameter to be set if the Won event is fired by a specific [IRaiseWon](../utilities.md#iraisewon) interface implementation.
+
+#### BoolSetOnAnimationFinished
 
 ``` mermaid
 classDiagram
     class BoolSetOnAnimationFinished{
     }
+```
+
+`BoolSetOnAnimationFinished.cs` defines a bool parameter to be set when the current state's animation finishes.
+
+#### BoolSetOnStateExited
+
+``` mermaid
+classDiagram
     class BoolSetOnStateExited{
     }
 ```
 
-#### BoolsSetBy
+`BoolSetOnStateExited.cs` defines a bool parameter to be set when the current state exits.
+
+#### BoolsSetByIRaiseMoveExecutedNoMovement
 
 ``` mermaid
 classDiagram
@@ -93,7 +204,9 @@ classDiagram
     }
 ```
 
-#### BoolsSetOn
+`BoolsSetByIRaiseMoveExecutedNoMovement.cs` defines multiple bool parameters to be set when the MoveExecuted event is fired with a zero vector by a specific [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+
+#### BoolsSetOnStateExited
 
 ``` mermaid
 classDiagram
@@ -101,7 +214,9 @@ classDiagram
     }
 ```
 
-#### BroadcastOn
+`BoolsSetOnStateExited.cs` defines multiple bool parameters to be set when the current state exits.
+
+#### BroadcastOnStateExit
 
 ``` mermaid
 classDiagram
@@ -109,13 +224,17 @@ classDiagram
     }
 ```
 
-#### TriggerSetBy
+`BroadcastOnStateExit.cs` fires a StateExited event when the current state exits.
+
+#### TriggerSetByTimer
 
 ``` mermaid
 classDiagram
     class TriggerSetByTimer{
     }
 ```
+
+`TriggerSetByTimer.cs` defines a trigger parameter to be triggered when a set amount of time has elapsed.
 
 ### Structs
 
@@ -129,3 +248,5 @@ classDiagram
     <<Struct>>
     }
 ```
+
+`BoolParameter.cs` is used by [StateMachineBehaviours](#statemachinebehaviours) to set a bool parameter with name 'name' to value 'value'.

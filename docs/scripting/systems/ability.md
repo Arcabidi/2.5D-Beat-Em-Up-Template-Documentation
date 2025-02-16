@@ -2,11 +2,15 @@
 
 !!! Summary
 
-    This section summarizes all aspects of the ability system, which includes everything units can do.
+    This page summarizes all aspects of the ability system, which includes everything units can do.
 
 ## Scripting
 
-All code files below are located at `Assets/_Project/Scripting/Systems/11 - Ability`.
+All code files below are at `Assets/_Project/Scripting/Systems/11 - Ability`.
+
+<figure markdown="span">
+    ![ability_scripting.png](../../assets/images/ability_scripting.png)
+</figure>
 
 ### CSharp
 
@@ -23,13 +27,13 @@ classDiagram
     }
 ```
 
-AbilityData represents all data transferred by a hitbox to targets on hit.
+AbilityData represents all data transferred by a [hitbox](hitbox.md#hitboxes) to targets on hit.
 
 `AbilityData.cs` defines what is common across all AbilityData, regardless of game. There is currently nothing common across all AbilityData, so this abstract class only serves as an empty base class for its potential child classes.
 
-`JabAbilityData.cs` defines the data that is transferred by the JabHitbox in the Jab ability. This includes things like damage and hitstun duration.
+`JabAbilityData.cs` defines the data that is transferred by the [JabHitbox](hitbox.md#hitboxes) in the [Jab](#abilities) ability. This includes things like damage and hitstun duration.
 
-`CrossAbilityData.cs` defines the data that is transferred by the CrossHitbox in the Cross ability. This includes things like knockback direction, magnitude, and duration.
+`CrossAbilityData.cs` defines the data that is transferred by the [CrossHitbox](hitbox.md#hitboxes) in the [Cross](#abilities) ability. This includes things like a knockback's [direction](game.md#direction), magnitude, and duration.
 
 ### MonoBehaviours
 
@@ -55,11 +59,11 @@ Abilities represent skills that can be performed by a user.
 
 !!! Note
 
-    Abilities are different from UnitActions. For example, a UnitAction named `FireBarrage` could have a unit cast three random fire spells in succession, each of which are their own separate ability.
+    Abilities are different from [UnitActions](action.md#unitactions). For example, a UnitAction named `FireBarrage` could have a unit cast three random fire spells in succession, each of which are their own separate ability.
 
-`Ability.cs` defines what is common across all abilities regardless of game. This includes things like having a reference to the Command instance that created it and a way to execute the ability.
+`Ability.cs` defines what is common across all abilities regardless of game. This includes things like having a reference to the [Command](command.md#commands) instance that created it and a way to execute the ability.
 
-`BeltScrollMove.cs` executes belt scroll movement where a unit performs 3D movement from a 2D perspective where the "up" input traverses depth instead of height. This component is attached to the Hero and Villain prefabs in the Training scene at runtime whenever it moves.
+`BeltScrollMove.cs` executes belt scroll movement, where a unit performs 3D movement from a 2D perspective where the "up" input traverses depth instead of height. This component is attached to the Hero and Villain prefabs in the Training scene at runtime whenever it moves.
 
 `Jab.cs` executes a jab where a unit throws a quick, sharp punch with their leading hand. This component is briefly attached to the Villain prefab in the Training scene at runtime whenever it attacks.
 
@@ -73,7 +77,7 @@ classDiagram
     }
 ```
 
-AbilityResponders respond to ability related events.
+AbilityResponders respond to [ability](#abilities) related events.
 
 `AbilityResponder.cs` represents a basic, general-purpose AbilityResponder used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
@@ -90,4 +94,4 @@ classDiagram
     }
 ```
 
-AbilityDataPackets contain the AbilityData sent from Hitboxes by an Ability. The AbilityData within can be modified by the ability, the command, the user, and the target. The AbilityDataPacket saves a version of the AbilityData at each step in case it is needed for reference.
+AbilityDataPackets contain the [AbilityData](#abilitydata) sent from [Hitboxes](hitbox.md#hitboxes) by an [Ability](#abilities). The AbilityData within can be modified by the ability, the [Command](command.md#commands) instance that created the ability, the user of the ability, and the target of the ability. The AbilityDataPacket saves a version of the AbilityData at each step in case it is needed for reference.

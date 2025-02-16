@@ -2,16 +2,39 @@
 
 !!! Summary
 
-    Welcome to the documentation site for the 2.5D Beat 'Em Up Template developed by Arcabidi! This section will get you started on everything you need to know to use this package.
+    Welcome to the documentation site for the 2.5D Beat 'Em Up Template developed by Arcabidi!<br>
+    This page will get you started on everything you need to know to use this package.
 
-Want to make a 2.5D beat ‘em up game but don’t know where to start? Look no further! This template demonstrates all the core systems needed to support your very own sidescrolling brawler.<br>
-<br>
-The example game included in this package provides a starter framework for new Unity programmers. Explore this site to understand how all ten core game systems function independently and interact!
+Want to make a 2.5D beat 'em up game but don't know where to start? Look no further! This template provides a starter framework geared towards new Unity programmers that will allow them to create their very own sidescrolling brawler. Explore this site to understand how all twelve core game systems function independently and interact!
 
+<!-- https://github.com/sneas/img-comparison-slider?tab=readme-ov-file -->
 <figure markdown="span">
-    ![introduction.png](assets/images/introduction.png)
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+    ></script>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+    />
+    <img-comparison-slider>
+        <img slot="first" src="assets/images/introduction_1.png" />
+        <img slot="second" src="assets/images/introduction_2.png" />
+    </img-comparison-slider>
     <figcaption>An example of prototype to product</figcaption>
 </figure>
+
+## Section guide
+
+<div class="grid cards" markdown>
+- [__Releases__](releases.md)<br>see what new features are included in the latest version
+- [__Unity Editor__](unity-editor.md)<br>understand how the project is organized in the Unity Editor
+- [__Assets__](assets.md)<br>learn how to dynamically load and unload items at runtime
+- [__Scenes__](scenes.md)<br>take control of how your game transitions between its sections
+- [__Scripting__](scripting/index.md)<br>create custom code to fit your game's needs
+- [__Systems__](scripting/systems/index.md)<br>deep dive into the twelve game systems that power the template
+- [__Utilities__](scripting/utilities.md)<br>supplementary code that can be used for any game when needed
+</div>
 
 ## Required packages
 
@@ -23,13 +46,6 @@ The example game included in this package provides a starter framework for new U
 * [Unity's UI Toolkit](https://docs.unity3d.com/6000.0/Documentation/Manual/UIElements.html) (for creating ui)
 * [Unity's Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html) (for asset management)
 
-## Section guide
+## Downloads
 
-<div class="grid cards" markdown>
-- <!--:fontawesome-brands-html5:--> [__Releases__](releases.md)<br>see what new features are included in the latest version
-- <!--:fontawesome-brands-js:--> [__Unity Editor__](unity-editor.md)<br>understand how the project is organized in the Unity Editor
-- <!--:fontawesome-brands-css3:--> [__Assets__](assets.md)<br>learn how to dynamically load and unload items at runtime
-- <!--:fontawesome-brands-internet-explorer:--> [__Scenes__](scenes.md)<br>take control of how your game transitions between its sections
-- <!--:fontawesome-brands-html5:--> [__Scripting__](scripting/index.md)<br>create custom code to fit your game's needs
-- <!--:fontawesome-brands-js:--> [__Systems__](scripting/systems/index.md)<br>deep dive into the ten game systems that power the template
-</div>
+[Unity Store]()

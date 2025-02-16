@@ -2,11 +2,15 @@
 
 !!! Summary
 
-    This section summarizes all aspects of the unit system, which is responsible for creating, customizing, and managing the lifetime of in-game units.
+    This page summarizes all aspects of the unit system, which is responsible for creating, customizing, and managing the lifetime of in-game units.
 
 ## Scripting
 
-All code files below are located at `Assets/_Project/Scripting/Systems/07 - Unit`.
+The code files in this section are at `Assets/_Project/Scripting/Systems/07 - Unit`.
+
+<figure markdown="span">
+    ![unit_scripting.png](../../assets/images/unit_scripting.png)
+</figure>
 
 ### CSharp
 
@@ -20,7 +24,7 @@ classDiagram
     }
 ```
 
-Teams represent groups of allied units. A single team can have both human-controlled and AI-controlled members.
+Teams represent groups of allied units. A single team can have both human player units and AI player units.
 
 `Team.cs` defines what is common across all teams regardless of game. This includes things like having a team name and having a data structure that manages its members.
 
@@ -33,7 +37,7 @@ classDiagram
     }
 ```
 
-`UnitManagerEvents.cs` contains all events related to unit management. This includes things like signaling when human-controlled or AI-controlled units spawn.
+`UnitManagerEvents.cs` contains all events related to unit management. This includes things like signaling when human player units or AI player units spawn.
 
 ### Enums
 
@@ -62,13 +66,13 @@ classDiagram
     }
 ```
 
-TeamManagers manage the lifetime of teams. This includes things like creating team prefabs and maintaining a data structure that contains the teams.
+TeamManagers manage the lifetime of [teams](#teams). This includes things like creating team prefabs and maintaining a data structure that contains the teams.
 
-`TeamManager.cs` represents a basic, general-purpose TeamManager used by our template. This component can be found attached to the TeamManager GameObject in the Training scene.
+`TeamManager.cs` represents a basic, general-purpose TeamManager used by the template. This component can be found attached to the TeamManager GameObject in the Training scene.
 
 #### UnitBehaviours
 
-UnitBehaviours are components attached to a unit prefab . The sum of all UnitBehaviours attached to a unit represents the Unit's functionality. 
+UnitBehaviours are components attached to a unit prefab that represents its functionality.
 
 ##### CrowdControlBehaviours
 
@@ -82,18 +86,6 @@ CrowdControlBehaviours describe the behaviour of a unit when it is crowd control
 
 `CrowdControlBehaviour.cs` represents a basic, general-purpose CrowdControlBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
-##### DirectionBehaviours
-
-``` mermaid
-classDiagram
-    class DirectionBehaviour{
-    }
-```
-
-DirectionBehaviours describe the behaviour of a unit's direction (the way the unit is facing).
-
-`DirectionBehaviour.cs` represents a basic, general-purpose DirectionBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
-
 ##### HealthBehaviours
 
 ``` mermaid
@@ -105,18 +97,6 @@ classDiagram
 HealthBehaviours describe the behaviour of a unit's health.
 
 `HealthBehaviour.cs` represents a basic, general-purpose HealthBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
-
-##### HurtboxMaskBehaviours
-
-``` mermaid
-classDiagram
-    class HurtboxMaskBehaviour{
-    }
-```
-
-HurtboxMaskBehaviours describe the behaviour of a unit's HurtboxMask. HurtboxMasks determine what HurtboxTypes a unit interacts with.
-
-`HurtboxMaskBehaviour.cs` represents a basic, general-purpose HurtboxMaskBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
 ##### NameBehaviours
 
@@ -155,9 +135,9 @@ classDiagram
 
 UnitControllers control the logic of specific units.
 
-`UnitController.cs` defines what is common across all UnitControllers, regardless of game. This includes things like setting HurtboxType.
+`UnitController.cs` defines what is common across all UnitControllers, regardless of game. This includes things like setting the units initial stats based off its referenced [UnitStats](#unitstats) file.
 
-`HeroController.cs` defines behaviour unique to the Hero unit. This includes things like facing the direction the player has their unit move. This component can be found attached to the Hero prefab, which is instantiated as a child of the HumanPlayerUnitManager GameObject in the Training scene at runtime.
+`HeroController.cs` defines behaviour unique to the Hero unit. This includes things like facing the [Direction](game.md#direction) the player has their unit move. This component can be found attached to the Hero prefab, which is instantiated as a child of the HumanPlayerUnitManager GameObject in the Training scene at runtime.
 
 `VillainController.cs` defines behaviour unique to the Villain unit. This includes things like determining what to do in response to the attack input action. This component can be found attached to the Villain prefab, which is instantiated as a child of the AIPlayerUnitManager GameObject in the Training scene at runtime.
 
@@ -198,15 +178,15 @@ UnitManagers are scripts that manage human and AI player units.
 
 `HumanPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only humans. This includes things like signaling whenever a human player unit was spawned. 
 
-`AIPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only AI. This includes things like signaling whenever an AI player unit was spawned
+`AIPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only AI. This includes things like signaling whenever an AI player unit was spawned.
 
-`TrainingHumanPlayerUnitManager.cs` manages the lifetime of human player units in the Training scene. This includes signaling a stagae loss once all human player units have been defeated. This component can be found attached to the HumanPlayerUnitManager GameObject in the Training scene.
+`TrainingHumanPlayerUnitManager.cs` manages the lifetime of human player units in the Training scene. This includes signaling a [stage loss](game.md#stageevents) once all human player units have been defeated. This component can be found attached to the HumanPlayerUnitManager GameObject in the Training scene.
 
-`TrainingAIPlayerUnitManager.cs` manages the lifetime of AI player units in the Training scene. This includes signaling a stage win once the defeated animation for all AI player units have finished. This component can be found attached to the AIPlayerUnitManager GameObject in the Training scene.
+`TrainingAIPlayerUnitManager.cs` manages the lifetime of AI player units in the Training scene. This includes signaling a [stage win](game.md#stageevents) once the defeated animation for all AI player units have finished. This component can be found attached to the AIPlayerUnitManager GameObject in the Training scene.
 
 ### ScriptableObjects
 
-These scripts contain centralized data that can be conveniently accessed from scenes and assets within a project. All classes in this folder derive from Unity's base ScriptableObject class.
+These scripts contain centralized data that can be conveniently accessed from scenes and assets within a project. All classes in this folder derive from Unity's base [ScriptableObject](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/ScriptableObject.html) class.
 
 ScriptableObjects are stored on disk and live independently of GameObjects and class instances. They are used as data containers to save large amounts of data, reducing a project’s memory usage by not duplicating values.
 

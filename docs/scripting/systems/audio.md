@@ -2,11 +2,25 @@
 
 !!! Summary
 
-    This section summarizes all aspects of the audio system, which is responsible for playing background music and sound effects.
+    This page summarizes all aspects of the audio system, which is responsible for playing background music and sound effects.
+
+## Audio folder
+
+The non-code files in this section are located at `Assets/_Project/Audio`.
+
+<figure markdown="span">
+    ![audio_audio_folder.png](../../assets/images/audio_audio_folder.png)
+</figure>
+
+Each subfolder is named after the source of the [AudioClips](https://docs.unity3d.com/Manual/class-AudioClip.html) inside.
 
 ## Scripting
 
-All code files below are located at `Assets/_Project/Scripting/Systems/05 - Audio`.
+The code files in this section are at `Assets/_Project/Scripting/Systems/05 - Audio`.
+
+<figure markdown="span">
+    ![audio_scripting.png](../../assets/images/audio_scripting.png)
+</figure>
 
 ### CSharp
 
@@ -41,9 +55,9 @@ classDiagram
 
 AudioManagers manage the background music and sound effects within a scene.
 
-`AudioManager.cs` defines what is common across all AudioManagers, regardless of game. This includes things like maintaining a data structure of AudioSources to play.
+`AudioManager.cs` defines what is common across all AudioManagers, regardless of game. This includes things like maintaining a data structure of [AudioSources](https://docs.unity3d.com/Manual/class-AudioSource.html) to play.
 
-`PersistentAudioManager.cs` defines AudioManager behaviour unique to the Persistent scene, like playing sound effects when the mouse enters Button VisualElements. This component can be found attached to the AudioManager GameObject in the Persistent scene.
+`PersistentAudioManager.cs` defines AudioManager behaviour unique to the Persistent scene, like playing sound effects when the mouse enters a [Button](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.Button.html). This component can be found attached to the AudioManager GameObject in the Persistent scene.
 
 `BootAudioManager.cs` defines AudioManager behaviour unique to the Boot scene, like playing sound effects when the Company Logo video player starts. This component can be found attached to the AudioManager GameObject in the Boot scene.
 

@@ -2,11 +2,15 @@
 
 !!! Summary
 
-    This section summarizes all aspects of the environment system, which is responsible for creating dynamic game environments.
+    This page summarizes all aspects of the environment system, which is responsible for creating dynamic game environments.
 
 ## Scripting
 
-All code files below are located at `Assets/_Project/Scripting/Systems/06 - Environment`.
+The code files in this section are at `Assets/_Project/Scripting/Systems/06 - Environment`.
+
+<figure markdown="span">
+    ![environment_scripting.png](../../assets/images/environment_scripting.png)
+</figure>
 
 ### MonoBehaviours
 
@@ -22,4 +26,4 @@ classDiagram
 
 BackgroundManagers manage GameObjects that make up the background of a scene. This includes things like setting them active or inactive as needed.
 
-`BackgroundManager.cs` manages the background GameObjects of the Title scene. It toggles its child GameObjects accordingly between the MainMenu and Options screens.
+`BackgroundManager.cs` manages the background GameObjects of the Title scene. It toggles its child GameObjects accordingly between the MainMenu and Options screens
