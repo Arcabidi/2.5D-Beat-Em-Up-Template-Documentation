@@ -178,7 +178,7 @@ classDiagram
 
 CursorControllers control the logic of the software cursor sprite. This includes things like dynamically updating its position, size, and visibility.
 
-`CursorController.cs` represents a basic, general-purpose CursorController used by our template. This component can be found attached to the Cursor GameObject in the Persistent scene.
+`CursorController.cs` represents a basic, general-purpose CursorController used by the template. This component can be found attached to the Cursor GameObject in the Persistent scene.
 
 #### FloatingHealthBarControllers
 
@@ -190,7 +190,7 @@ classDiagram
 
 FloatingHealthBarControllers control the logic of floating health bars. This includes things like updating the floating health bar's position to follow a specific unit.
 
-`FloatingHealthBarController.cs` represents a basic, general-purpose FloatingHealthBarController used by our template. This component can be found attached to the FloatingHealthBar prefab. These prefabs are instantiated as children of the FloatingHealthBarManager GameObject in the Training scene at runtime.
+`FloatingHealthBarController.cs` represents a basic, general-purpose FloatingHealthBarController used by the template. This component can be found attached to the FloatingHealthBar prefab. These prefabs are instantiated as children of the FloatingHealthBarManager GameObject in the Training scene at runtime.
 
 #### FloatingHealthBarManagers
 
@@ -202,7 +202,7 @@ classDiagram
 
 FloatingHealthBarManagers manage the lifetimes of floating health bars. This includes things like registering and unregistering units to give them their own floating health bar.
 
-`FloatingHealthBarManager.cs` represents a basic, general-purpose FloatingHealthBarManager used by our template. This component can be found attached to FloatingHealthBarManager GameObject in the Training scene.
+`FloatingHealthBarManager.cs` represents a basic, general-purpose FloatingHealthBarManager used by the template. This component can be found attached to FloatingHealthBarManager GameObject in the Training scene.
 
 #### ScreenControllers
 
@@ -269,6 +269,8 @@ classDiagram
 UIManagers manage the lifetimes of [UIViews](#uiviews) within a scene. This includes things like creating, showing, and hiding screens when needed.
 
 `UIManager.cs` defines what is common across all UIManagers, regardless of game. This includes things like referencing a [UIDocument](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UIDocument.html) or maintaining a data structure that contains all the UIViews its managing.
+
+`PersistentUIManager.cs` defines UIManager behaviour unique to the Persistent scene, like showing the Fader screen for fade-from or fade-to transitions. This component can be found attached to the UIManager GameObject in the Persistent scene.
 
 `BootUIManager.cs` defines UIManager behaviour unique to the Boot scene, like showing the Splash screen by default. This component can be found attached to the UIManager GameObject in the Boot scene.
 

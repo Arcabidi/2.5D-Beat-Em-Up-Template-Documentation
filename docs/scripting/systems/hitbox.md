@@ -107,7 +107,7 @@ classDiagram
 
 HurtDataEditors allow the target of an [Ability](ability.md#abilities) a chance to edit its [AbilityData](ability.md#abilitydata) post hit.
 
-`HurtDataEditor.cs` represents a basic, general-purpose HurtDataEditor used by our template. This component can be found attached to the Hurtboxes GameObject under the Human prefab and its Hero and Villain prefab variants.
+`HurtDataEditor.cs` represents a basic, general-purpose HurtDataEditor used by the template. This component can be found attached to the Hurtboxes GameObject under the Human prefab and its Hero and Villain prefab variants.
 
 #### HurtResponders
 
@@ -119,7 +119,7 @@ classDiagram
 
 HurtResponders respond when a unit's [Hurtbox](#hurtboxes) triggers a collision with a [Hitbox](#hitboxes).
 
-`HurtResponder.cs` represents a basic, general-purpose HurtResponder used by our template. This component can be found attached to the Hurtboxes GameObject under the Human prefab and its Hero and Villain prefab variants.
+`HurtResponder.cs` represents a basic, general-purpose HurtResponder used by the template. This component can be found attached to the Hurtboxes GameObject under the Human prefab and its Hero and Villain prefab variants.
 
 #### UnitBehaviours
 

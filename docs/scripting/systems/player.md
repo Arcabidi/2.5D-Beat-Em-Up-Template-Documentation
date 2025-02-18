@@ -100,7 +100,7 @@ classDiagram
 
 PlayerManagers are custom scripts that manage human and AI [Players](#players), replacing Unity's default [Player Input Manager](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.13/manual/PlayerInputManager.html) component.
 
-`PlayerManager.cs` defines what is common across all PlayerManagers, regardless of game. This includes things like maintaining a data structure for the players and defining the maximum number of players it can managae.
+`PlayerManager.cs` defines what is common across all PlayerManagers, regardless of game. This includes things like maintaining a data structure for the players and defining the maximum number of players it can manage.
 
 `HumanPlayerManager.cs` defines what is common across all PlayerManagers that manage only humans. This includes detecting the usage of unpaired devices and adding a new human player. This component can be found attached to the HumanPlayerManager GameObject in the Persistent scene.
 

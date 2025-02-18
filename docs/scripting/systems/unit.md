@@ -84,7 +84,7 @@ classDiagram
 
 CrowdControlBehaviours describe the behaviour of a unit when it is crowd controlled.
 
-`CrowdControlBehaviour.cs` represents a basic, general-purpose CrowdControlBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
+`CrowdControlBehaviour.cs` represents a basic, general-purpose CrowdControlBehaviour used by the template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
 ##### HealthBehaviours
 
@@ -96,7 +96,7 @@ classDiagram
 
 HealthBehaviours describe the behaviour of a unit's health.
 
-`HealthBehaviour.cs` represents a basic, general-purpose HealthBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
+`HealthBehaviour.cs` represents a basic, general-purpose HealthBehaviour used by the template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
 ##### NameBehaviours
 
@@ -108,7 +108,7 @@ classDiagram
 
 NameBehaviours describe the behaviour of a unit's name.
 
-`NameBehaviour.cs` represents a basic, general-purpose NameBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
+`NameBehaviour.cs` represents a basic, general-purpose NameBehaviour used by the template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
 ##### StatusEffectBehaviours
 
@@ -120,7 +120,7 @@ classDiagram
 
 StatusEffectBehaviours describe the behaviour of a unit when it is affected by status effects.
 
-`StatusEffectBehaviour.cs` represents a basic, general-purpose StatusEffectBehaviour used by our template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
+`StatusEffectBehaviour.cs` represents a basic, general-purpose StatusEffectBehaviour used by the template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
 #### UnitControllers
 
@@ -151,7 +151,7 @@ classDiagram
 
 UnitFactories load and release addressable unit prefab assets.
 
-`UnitFactory.cs` represents a basic, general-purpose UnitFactory used by our template. This component can be found attached to the UnitFactory GameObject in the Persistent scene.
+`UnitFactory.cs` represents a basic, general-purpose UnitFactory used by the template. This component can be found attached to the UnitFactory GameObject in the Persistent scene.
 
 #### UnitManagers
 
@@ -176,9 +176,9 @@ UnitManagers are scripts that manage human and AI player units.
 
 `UnitManager.cs` defines what is common across all UnitManagers, regardless of game. This includes things like spawning units.
 
-`HumanPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only humans. This includes things like signaling whenever a human player unit was spawned. 
+`HumanPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only human player units. This includes things like signaling whenever a human player unit was spawned. 
 
-`AIPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only AI. This includes things like signaling whenever an AI player unit was spawned.
+`AIPlayerUnitManager.cs` defines what is common across all UnitManagers that manage only AI player units. This includes things like signaling whenever an AI player unit was spawned.
 
 `TrainingHumanPlayerUnitManager.cs` manages the lifetime of human player units in the Training scene. This includes signaling a [stage loss](game.md#stageevents) once all human player units have been defeated. This component can be found attached to the HumanPlayerUnitManager GameObject in the Training scene.
 

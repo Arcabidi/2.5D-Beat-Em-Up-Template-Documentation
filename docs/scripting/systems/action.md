@@ -26,7 +26,7 @@ classDiagram
 
 UnitActionManagers manage the [UnitActions](#unitactions) a unit knows how to perform.
 
-`UnitActionManager.cs` represents a basic, general-purpose UnitActionManager in our template game. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
+`UnitActionManager.cs` represents a basic, general-purpose UnitActionManager in the template. This component can be found attached to the Human prefab and its Hero and Villain prefab variants. These prefabs are instantiated as children of the HumanPlayerUnitManager and AIPlayerUnitManager GameObjects in the Training scene at runtime.
 
 ### ScriptableObjects
 
@@ -39,13 +39,10 @@ ScriptableObjects are stored on disk and live independently of GameObjects and c
 ``` mermaid
 classDiagram
     UnitAction <|-- BeltScrollMoveUnitAction
-    BeltScrollMoveUnitAction <|-- TemplateBeltScrollMoveUnitAction
+    UnitAction <|-- JumpUnitAction
     UnitAction <|-- JabUnitAction
     UnitAction <|-- CrossUnitAction
     class UnitAction{
-        <<Abstract>>
-    }
-    class BeltScrollMoveUnitAction{
         <<Abstract>>
     }
 ```
@@ -59,6 +56,8 @@ UnitActions represent actions that units can perform.
 `UnitAction.cs` defines what is common across all UnitActions regardless of game. This includes things like returning an instanced version of itself called a [Command](command.md#commands).
 
 `BeltScrollMoveUnitAction.cs` represents the knowledge of performing the [BeltScrollMove](ability.md#abilities) ability. Both the Hero and Villain prefabs know this UnitAction in their [UnitActionManager](#unitactionmanagers) components.
+
+`JumpUnitAction.cs` represents the knowledge of performing the [Jump](ability.md#abilities) ability. The Hero prefab knows this UnitAction in its [UnitActionManager](#unitactionmanagers) component.
 
 `JabUnitAction.cs` represents the knowledge of performing the [Jab](ability.md#abilities) ability. The Villain prefab knows this UnitAction in its [UnitActionManager](#unitactionmanagers) component.
 

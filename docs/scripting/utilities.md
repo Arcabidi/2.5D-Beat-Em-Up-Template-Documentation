@@ -87,7 +87,7 @@ AbstractStates represent the conceptual nodes of a StateMachine while GameStates
 
 `GameState.cs` defines what is common across all GameStates, regardless of game.
 
-`TemplateGameState.cs` represents the GameStates in our template game.
+`TemplateGameState.cs` represents the GameStates in the template.
 
 ### Interfaces
 
@@ -115,7 +115,7 @@ classDiagram
     }
 ```
 
-`ICanMove.cs` is implemented by classes that can move conditionally. It is implemented by [UnitController](systems/unit.md#unitcontrollers) so that [TemplateBeltScrollMove](systems/ability.md#abilities) can know if the unit can currently move.
+`ICanMove.cs` is implemented by classes that can move conditionally. It is implemented by [UnitController](systems/unit.md#unitcontrollers) so that [BeltScrollMove](systems/ability.md#abilities) can know if the unit can currently move.
 
 #### ICanStop
 
@@ -126,7 +126,7 @@ classDiagram
     }
 ```
 
-`ICanStop.cs` is implemented by classes that can stop. It is implemented by [TemplateBeltScrollMove](systems/ability.md#abilities) so that [UnitController](systems/unit.md#unitcontrollers) can stop the unit from moving when needed.
+`ICanStop.cs` is implemented by classes that can stop. It is implemented by [BeltScrollMove](systems/ability.md#abilities) so that [UnitController](systems/unit.md#unitcontrollers) can stop the unit from moving when needed.
 
 #### IDamageable
 
@@ -227,7 +227,7 @@ classDiagram
 
 `IHaveKnockback.cs` is implemented by classes that have knockback. It is implemented by [JabAbilityData](systems/ability.md#abilitydata) and [CrossAbilityData](systems/ability.md#abilitydata) for two reasons:
 
-1. So that [JabHitbox](systems/hitbox.md#hitboxes) and [CrossHitbox](systems/hitbox.md#hitboxes) can assign knockback direction after a collision based on hit info
+1. So that [JabHitbox](systems/hitbox.md#hitboxes) and [CrossHitbox](systems/hitbox.md#hitboxes) can assign knockback direction after a collision based on hit info.
 2. So that a target's [HurtResponder](systems/hitbox.md#hurtresponders) knows that it has to process knockback as part of its hurt response.
 
 #### IHaveMaximumHealth
@@ -249,8 +249,8 @@ classDiagram
 
 `IHealth.cs` is implemented by classes that have health. It is implemented by [UnitController](systems/unit.md#unitcontrollers) for two reasons:
 
-1. So that [GameplayScreenController](systems/user-interface.md#screencontrollers) can initialize the Hero's health bar with the correct current and maximum health
-2. So that [FloatingHealthBarManager](systems/user-interface.md#floatinghealthbarmanagers) can initialize the Villain's floating health bar with the correct current and maximum health
+1. So that [GameplayScreenController](systems/user-interface.md#screencontrollers) can initialize the Hero's health bar with the correct current and maximum health.
+2. So that [FloatingHealthBarManager](systems/user-interface.md#floatinghealthbarmanagers) can initialize the Villain's floating health bar with the correct current and maximum health.
 
 #### IHaveName
 
@@ -274,6 +274,20 @@ classDiagram
 
 `IHaveRange.cs` is implemented by classes that have range. It is implemented by [JabUnitAction](systems/action.md#unitactions) and [CrossUnitAction](systems/action.md#unitactions) so that [BasicEnemyAI](systems/player.md#ais) knows the maximum range at which to position itself in order to hit with the edge of an ability.
 
+#### IHaveWalkSpeed
+
+``` mermaid
+classDiagram
+    class IHaveWalkSpeed{
+    <<Interface>>
+    }
+```
+
+`IHaveWalkSpeed.cs` is implemented by classes that have walk speed. It is implemented by [UnitStats](systems/unit.md#unitstats) and [UnitController](systems/unit.md#unitcontrollers) for two reasons:
+
+1. So that [TrainingAIPlayerUnitManager](systems/unit.md#unitmanagers) can randomize Villain walk speeds within a set range of their base walk speed.
+2. So that each instance of [BeltScrollMove](systems/ability.md#abilities) can set its internal walk speed via [BeltScrollMoveUnitAction](systems/action.md#unitactions).
+
 #### IPausable
 
 ``` mermaid
@@ -283,7 +297,7 @@ classDiagram
     }
 ```
 
-`IPauseable.cs` is implemented by classes that are pausable. It is implemented by [TemplateBeltScrollMove](systems/ability.md#abilities) to allow a [UnitController](systems/unit.md#unitcontrollers) to pause and unpause its behavior.
+`IPausable.cs` is implemented by classes that are pausable. It is implemented by [BeltScrollMove](systems/ability.md#abilities) to allow a [UnitController](systems/unit.md#unitcontrollers) to pause and unpause its behavior.
 
 #### IPauseAnimator
 
@@ -305,7 +319,7 @@ classDiagram
     }
 ```
 
-`IRaiseMoveExecuted.cs` is implemented by classes that raise a move executed event. It is implemented by [TemplateBeltScrollMove](systems/ability.md#abilities) for two reasons:
+`IRaiseMoveExecuted.cs` is implemented by classes that raise a move executed event. It is implemented by [BeltScrollMove](systems/ability.md#abilities) for two reasons:
 
 1. So that [HeroController](systems/unit.md#unitcontrollers) can have the unit face the direction it is moving.
 2. To notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the unit is moving so that the animation state machine can update accordingly.

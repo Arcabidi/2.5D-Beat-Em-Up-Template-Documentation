@@ -104,7 +104,7 @@ classDiagram
 
 SceneLoaders load and unload scenes.
 
-`SceneLoader.cs` represents a basic, general-purpose SceneLoader used by our template. This component can be found attached to the SceneLoader GameObject in the Persistent scene.
+`SceneLoader.cs` represents a basic, general-purpose SceneLoader used by the template. This component can be found attached to the SceneLoader GameObject in the Persistent scene.
 
 #### UnitBehaviours
 
