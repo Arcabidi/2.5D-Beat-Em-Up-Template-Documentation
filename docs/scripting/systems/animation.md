@@ -174,7 +174,20 @@ classDiagram
     }
 ```
 
-`BoolSetByIRaiseWonWon.cs` define a bool parameter to be set if the Won event is fired by an [IRaiseWon](../utilities.md#iraisewon) interface implementation.
+`BoolSetByIRaiseWonWon.cs` defines a bool parameter to be set if the Won event is fired by an [IRaiseWon](../utilities.md#iraisewon) interface implementation.
+
+#### BoolSetByJumpAbility
+
+``` mermaid
+classDiagram
+    class BoolSetByJumpAbility{
+    }
+```
+
+`BoolSetByJumpAbility.cs` defines a bool parameter to be set if the SetAnimationBool event is fired by a [Jump](ability.md#abilities) ability.
+
+The difference between this script and [BoolSetByAbility](#boolsetbyability) is that it correctly subscribes to the Jump ability even when two abilities
+are attached to the player's character at the same time. In the case of this template, even when the player is [BeltScrollMoving](ability.md#abilities).
 
 #### BoolSetOnAnimationFinished
 
