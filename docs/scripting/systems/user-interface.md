@@ -202,7 +202,7 @@ classDiagram
 
 FloatingHealthBarManagers manage the lifetimes of floating health bars. This includes things like registering and unregistering units to give them their own floating health bar.
 
-`FloatingHealthBarManager.cs` represents a basic, general-purpose FloatingHealthBarManager used by the template. This component can be found attached to FloatingHealthBarManager GameObject in the Training scene.
+`FloatingHealthBarManager.cs` represents a basic, general-purpose FloatingHealthBarManager used by the template. This component can be found attached to the FloatingHealthBarManager GameObject in the Training scene.
 
 #### ScreenControllers
 
