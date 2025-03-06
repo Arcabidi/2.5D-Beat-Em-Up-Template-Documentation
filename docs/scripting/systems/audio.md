@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the audio system, which is responsible for playing background music and sound effects.
+    This page summarizes all aspects of the audio system, which is responsible for playing dynamic background music and sound effects.
 
 ## Audio folder
 

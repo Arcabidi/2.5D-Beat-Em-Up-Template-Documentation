@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the animation system, which is responsible for bringing GameObjects in the scene to life.
+    This page summarizes all aspects of the animation system, which is responsible for bringing objects in the scene to life.
 
 ## Design decisions
 

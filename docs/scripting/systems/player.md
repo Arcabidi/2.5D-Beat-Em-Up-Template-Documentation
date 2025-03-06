@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the player system, which is responsible for managing human and AI players.
+    This page summarizes all aspects of the player system, which is responsible for managing both human and AI players.
 
 ## Design decisions
 

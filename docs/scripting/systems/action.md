@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the action system, which is responsible for controlling which in-game actions a unit can perform.
+    This page summarizes all aspects of the action system, which is responsible for controlling what a unit knows how to do.
 
 ## Scripting
 

@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the environment system, which is responsible for creating dynamic game environments.
+    This page summarizes all aspects of the environment system, which is responsible for building immersive and responsive worlds.
 
 ## Scripting
 

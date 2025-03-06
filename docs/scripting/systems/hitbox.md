@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the hitbox system, which is responsible for transfering data between two bodies on collision.
+    This page summarizes all aspects of the hitbox system, which is responsible for transfering data between two bodies through collision detection.
     
 ## Scripting
 

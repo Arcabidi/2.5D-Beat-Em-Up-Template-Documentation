@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the user interface (UI) system, which is responsible for creating custom screens and transitioning between them.
+    This page summarizes all aspects of the user interface (UI) system, which is responsible for designing custom menus and transitions.
 
 ## Design decisions
 

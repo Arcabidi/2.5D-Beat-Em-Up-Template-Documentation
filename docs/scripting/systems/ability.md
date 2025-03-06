@@ -2,7 +2,7 @@
 
 !!! Summary
 
-    This page summarizes all aspects of the ability system, which includes everything units can do.
+    This page summarizes all aspects of the ability system, which includes everything and anything units can do.
 
 ## Scripting
 
