@@ -6,7 +6,7 @@
 
 ## Audio folder
 
-The non-code files in this section are located at `Assets/Arcabidi/BeatEmUpTemplate/Audio`.
+The non-code files in this section are located at `BeatEmUpTemplate/Audio`.
 
 <figure markdown="span">
     ![audio_audio_folder.png](../../assets/images/audio_audio_folder.png)
@@ -16,7 +16,7 @@ Each subfolder is named after the source of the [AudioClips](https://docs.unity3
 
 ## Scripting
 
-The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/05 - Audio`.
+The code files in this section are at `BeatEmUpTemplate/Scripting/Systems/05 - Audio`.
 
 <figure markdown="span">
     ![audio_scripting.png](../../assets/images/audio_scripting.png)

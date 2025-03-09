@@ -33,7 +33,7 @@ The [Addressables package](https://docs.unity3d.com/Packages/com.unity.addressab
 
 Once it is installed the second step is to mark all Addressable content in the project. Any content marked this way can be dynamically loaded or unloaded at runtime.<br>
 <br>
-This is done by selecting an asset in the Project window and checking the now available Addressable box in the Inspector. In the example below the Persistent scene has been marked as an Addressable asset. You can find it at `Assets/Arcabidi/BeatEmUpTemplate/WorkingInUnity/Scenes`.<br>
+This is done by selecting an asset in the Project window and checking the now available Addressable box in the Inspector. In the example below the Persistent scene has been marked as an Addressable asset. You can find it at `BeatEmUpTemplate/WorkingInUnity/Scenes`.<br>
 <br>
 <figure markdown="span">
     ![addressables_package_2.png](assets/images/addressables_package_2.png)

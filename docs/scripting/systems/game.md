@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/01 - Game`.
+The code files in this section are at `BeatEmUpTemplate/Scripting/Systems/01 - Game`.
 
 <figure markdown="span">
     ![game_scripting.png](../../assets/images/game_scripting.png)

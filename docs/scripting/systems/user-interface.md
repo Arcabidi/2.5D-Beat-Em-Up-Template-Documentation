@@ -36,7 +36,7 @@ To change this we have created our own [custom CursorController](#cursorcontroll
 
 ## UI folder
 
-The non-code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/WorkingInUnity/UI`.
+The non-code files in this section are at `BeatEmUpTemplate/WorkingInUnity/UI`.
 
 <figure markdown="span">
     ![ui_ui_folder.png](../../assets/images/ui_ui_folder.png)
@@ -90,7 +90,7 @@ VisualTrees representing entire scenes are referenced by the [UIDocument](https:
 
 ## Scripting
 
-The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/04 - UI`.
+The code files in this section are at `BeatEmUpTemplate/Scripting/Systems/04 - UI`.
 
 <figure markdown="span">
     ![ui_scripting.png](../../assets/images/ui_scripting.png)
