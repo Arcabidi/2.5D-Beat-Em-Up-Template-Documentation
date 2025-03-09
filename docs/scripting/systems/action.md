@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `Assets/_Project/Scripting/Systems/09 - Action`.
+The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/09 - Action`.
 
 <figure markdown="span">
     ![action_scripting.png](../../assets/images/action_scripting.png)

@@ -26,7 +26,7 @@ Initialization --> Persistent
 Persistent --> Loaded/Unloaded
 ```
 
-All [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) files are located at `Assets/_Project/Unity/Scenes`.
+All [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) files are located at `Assets/Arcabidi/BeatEmUpTemplate/WorkingInUnity/Scenes`.
 
 | <div style="width:160px" /> Scene Name | Description                          |
 | ---------------: | :----------------------------------- |

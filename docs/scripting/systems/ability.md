@@ -6,7 +6,7 @@
 
 ## Scripting
 
-All code files below are at `Assets/_Project/Scripting/Systems/11 - Ability`.
+All code files below are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/11 - Ability`.
 
 <figure markdown="span">
     ![ability_scripting.png](../../assets/images/ability_scripting.png)

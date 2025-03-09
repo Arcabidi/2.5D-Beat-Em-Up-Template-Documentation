@@ -30,7 +30,7 @@ In 2020 Unity released a new input system called the [Input System package](http
 
 ## Input folder
 
-The non-code files in this section are at `Assets/_Project/WorkingInUnity/Input`.
+The non-code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/WorkingInUnity/Input`.
 
 <figure markdown="span">
     ![input_input_folder.png](../../assets/images/input_input_folder.png)
@@ -58,7 +58,7 @@ The non-code files in this section are in the `InputSystem` subfolder.
 
 ## Scripting
 
-The code files in this section are at `Assets/_Project/Scripting/Systems/03 - Input`.
+The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/03 - Input`.
 
 <figure markdown="span">
     ![input_scripting.png](../../assets/images/input_scripting.png)

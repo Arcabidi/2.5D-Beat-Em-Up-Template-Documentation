@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `Assets/_Project/Scripting/Systems/06 - Environment`.
+The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/06 - Environment`.
 
 <figure markdown="span">
     ![environment_scripting.png](../../assets/images/environment_scripting.png)

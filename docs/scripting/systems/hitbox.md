@@ -6,7 +6,7 @@
     
 ## Scripting
 
-All code files below are at `Assets/_Project/Scripting/Systems/12 - Hitbox`.
+All code files below are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/12 - Hitbox`.
 
 <figure markdown="span">
     ![hitbox_scripting.png](../../assets/images/hitbox_scripting.png)

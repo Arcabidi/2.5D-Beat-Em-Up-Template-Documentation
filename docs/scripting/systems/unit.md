@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `Assets/_Project/Scripting/Systems/07 - Unit`.
+The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/07 - Unit`.
 
 <figure markdown="span">
     ![unit_scripting.png](../../assets/images/unit_scripting.png)

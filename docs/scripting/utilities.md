@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `Assets/_Project/Scripting/Utilities`.
+The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Utilities`.
 
 <figure markdown="span">
     ![utilities_scripting.png](../assets/images/utilities_scripting.png)

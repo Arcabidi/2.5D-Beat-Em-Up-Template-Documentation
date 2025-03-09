@@ -18,7 +18,7 @@ This project uses Unity's default built-in animation system, known as the [Mecan
 
 ## Animation folder
 
-The non-code files in this section are at `Assets/_Project/Animation`.
+The non-code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Animation`.
 
 <figure markdown="span">
     ![animation_animation_folder.png](../../assets/images/animation_animation_folder.png)
@@ -46,7 +46,7 @@ The non-code files in this section are in the `MecanimAnimation` subfolder.
 
 ## Scripting folder
 
-The code files in this section are at `Assets/_Project/Scripting/Systems/08 - Animation`.
+The code files in this section are at `Assets/Arcabidi/BeatEmUpTemplate/Scripting/Systems/08 - Animation`.
 
 <figure markdown="span">
     ![animation_scripting.png](../../assets/images/animation_scripting.png)

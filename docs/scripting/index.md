@@ -12,7 +12,7 @@
 
 ### Folders
 
-All code in the project is located at `Assets/_Project/Scripting`.
+All code in the project is located at `Assets/Arcabidi/BeatEmUpTemplate/Scripting`.
 
 | <div style="width:180px" /> Folder Name | Description                          |
 | ---------------: | :----------------------------------- |
