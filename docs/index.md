@@ -5,7 +5,9 @@
     Welcome to the documentation site for the 2.5D Beat 'Em Up Template developed by Arcabidi!<br>
     This page will get you started on everything you need to know to use this package.
 
-Want to make a 2.5D beat 'em up game but don't know where to start? Look no further! This template provides a starter framework geared towards new Unity programmers that will allow them to create their very own sidescrolling brawler. Explore this site to understand how all twelve core game systems function independently and interact!
+Want to make a 2.5D beat 'em up game but don't know where to start? This template provides a starting point for beginner and intermediate developers to build their very own belt-scrolling brawler.
+
+This package combines 2D visuals with 3D depth to add a modern feel to the classic beat 'em up experience. Its modular design allows for extensive customization (units, abilities, AI, etc.), and it can easily be adapted to support various 2.5D genres beyond beat 'em ups such as platformers or adventure games.
 
 <!-- https://github.com/sneas/img-comparison-slider?tab=readme-ov-file -->
 <figure markdown="span">
@@ -42,9 +44,9 @@ Want to make a 2.5D beat 'em up game but don't know where to start? Look no furt
 
     This template only uses official packages made by Unity. They should be installed automatically with the project as dependencies, but they can also be installed manually via `Window > Package Manager`.
 
-* [Unity's Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/index.html) (for player input)
-* [Unity's UI Toolkit](https://docs.unity3d.com/6000.0/Documentation/Manual/UIElements.html) (for creating ui)
-* [Unity's Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html) (for asset management)
+* [Unity's Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/index.html) (For player input. Installed by default in Unity 6.)
+* [Unity's UI Toolkit](https://docs.unity3d.com/6000.0/Documentation/Manual/UIElements.html) (For creating UI. Installed by default in Unity 6.)
+* [Unity's Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html) (For asset management.)
 
 ## Downloads
 

@@ -350,16 +350,6 @@ classDiagram
 
 These scripts are meant to be attached to GameObjects in the scene as components and inherit from Unity's [MonoBehaviour](https://docs.unity3d.com/6000.0/Documentation/Manual/class-MonoBehaviour.html) class.
 
-#### CycleSpriteOnEnable
-
-``` mermaid
-classDiagram
-    class CycleSpriteOnEnable{
-    }
-```
-
-`CycleSpriteOnEnable.cs` is used to continuously cycle between a collection of related sprites. This component can be found attached to the Street GameObject in the Title scene.
-
 #### HorizontalDolly
 
 ``` mermaid
