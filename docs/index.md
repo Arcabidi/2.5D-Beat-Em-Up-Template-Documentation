@@ -46,7 +46,7 @@ This package combines 2D visuals with 3D depth to add a modern feel to the class
 
 * [Unity's Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/index.html) (For player input. Installed by default in Unity 6.)
 * [Unity's UI Toolkit](https://docs.unity3d.com/6000.0/Documentation/Manual/UIElements.html) (For creating UI. Installed by default in Unity 6.)
-* [Unity's Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html) (For asset management.)
+* [Unity's Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html) (For asset management. Must be installed via Package Manager.)
 
 ## Downloads
 
