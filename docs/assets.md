@@ -93,7 +93,7 @@ The report will also notify you of any potential risks for asset duplication, wh
 
 ### 7. Profiler module
 
-Once BuildReports are enabled the Addressables [Profiler module](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ProfilerModule.html) can notify you at runtime whenever AssetBundles are loaded or unloaded. You can use this information to optimize the memory usage of your game. The first step is to install the Unity Profiling Core API from the PackageManager.<br>
+Once BuildReports are enabled the Addressables [Profiler module](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ProfilerModule.html) can notify you at runtime whenever AssetBundles are loaded or unloaded. You can use this information to optimize the memory usage of your game. The first step is to install the Unity Profiling Core API. It may have been included automatically when you installed the Addressables package, but if it wasn't you can search for it in the PackageManager.<br>
 <br>
 <figure markdown="span">
     ![profiler_module_1.png](assets/images/profiler_module_1.png)
