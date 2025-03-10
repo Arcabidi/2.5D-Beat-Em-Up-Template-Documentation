@@ -51,7 +51,7 @@ When you mark an asset as Addressable it is placed in the Default Local Group by
 
 ### 4. Choose BundleModes
 
-The fourth step is to adjust the way each Addressables group is packed into AssetBundles by changing its BundleMode. These settings can be found at `Assets/AddressableAssetsData/AssetGroups/[Addressable Group Name].asset` where each Addressables group has its own settings file.<br>
+The fourth step is to adjust the way each Addressables group is packed into AssetBundles by changing its [BundleMode](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/PackingGroupsAsBundles.html). These settings can be found at `Assets/AddressableAssetsData/AssetGroups/[Addressable Group Name].asset` where each Addressables group has its own settings file.<br>
 <br>
 <figure markdown="span">
     ![addressables_package_4.png](assets/images/addressables_package_4.png)
@@ -105,7 +105,7 @@ Next, open the Profiler window at `Window > Analysis > Profile` and enable Addre
     ![profiler_module_2.png](assets/images/profiler_module_2.png)
 </figure>
 <br>
-Lastly, the Profiler module only supports the Use Existing Build setting for the Play Mode Script. Make sure your Addressables build exists, then select the appropriate option from the Play Mode Script menu of the groups window.<br>
+Lastly, the Profiler module only supports the Use Existing Build setting for the [Play Mode Script](https://docs.unity3d.com/Packages/com.unity.addressables@1.6/manual/AddressableAssetsDevelopmentCycle.html#:~:text=in%20the%20Editor.-,Play%20mode%20scripts,-The%20Addressable%20Assets). Make sure your Addressables build exists, then select the appropriate option from the Play Mode Script menu of the groups window.<br>
 <br>
 <figure markdown="span">
     ![profiler_module_3.png](assets/images/profiler_module_3.png)
