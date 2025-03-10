@@ -12,7 +12,7 @@
 
 ### Folders
 
-All code in the project is located at `BeatEmUpTemplate/Scripting`.
+All code in the project is located at `BeatEmUpTemplate/Assets/Scripting`.
 
 | <div style="width:180px" /> Folder Name | Description                          |
 | ---------------: | :----------------------------------- |

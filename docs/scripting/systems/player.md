@@ -20,7 +20,7 @@ For this template we have opted not to use Unity's default Player Input Manager 
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Scripting/Systems/02 - Player`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/02 - Player`.
 
 <figure markdown="span">
     ![player_scripting.png](../../assets/images/player_scripting.png)

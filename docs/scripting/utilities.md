@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Scripting/Utilities`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Utilities`.
 
 <figure markdown="span">
     ![utilities_scripting.png](../assets/images/utilities_scripting.png)

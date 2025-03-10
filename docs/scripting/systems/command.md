@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Scripting/Systems/10 - Command`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/10 - Command`.
 
 <figure markdown="span">
     ![command_scripting.png](../../assets/images/command_scripting.png)
