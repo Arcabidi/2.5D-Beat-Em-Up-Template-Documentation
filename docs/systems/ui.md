@@ -1,4 +1,4 @@
-# User Interface (UI)
+# UI
 
 !!! Summary
 
@@ -90,7 +90,7 @@ VisualTrees representing entire scenes are referenced by the [UIDocument](https:
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/04 - UI`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/UI`.
 
 <figure markdown="span">
     ![ui_scripting.png](../../assets/images/ui_scripting.png)
@@ -98,7 +98,7 @@ The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems
 
 ### CSharp
 
-These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked or are abstract classes representing concepts.
 
 #### UIEvents
 

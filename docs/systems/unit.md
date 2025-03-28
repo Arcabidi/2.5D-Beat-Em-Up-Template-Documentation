@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/07 - Unit`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Unit`.
 
 <figure markdown="span">
     ![unit_scripting.png](../../assets/images/unit_scripting.png)
@@ -14,7 +14,7 @@ The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems
 
 ### CSharp
 
-These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked or are abstract classes representing concepts.
 
 #### Teams
 

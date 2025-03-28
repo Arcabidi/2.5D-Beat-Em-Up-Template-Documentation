@@ -16,7 +16,7 @@ Each subfolder is named after the source of the [AudioClips](https://docs.unity3
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/05 - Audio`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Audio`.
 
 <figure markdown="span">
     ![audio_scripting.png](../../assets/images/audio_scripting.png)
@@ -24,7 +24,7 @@ The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems
 
 ### CSharp
 
-These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked or are abstract classes representing concepts.
 
 #### AudioEvents
 

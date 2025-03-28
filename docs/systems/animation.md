@@ -46,7 +46,7 @@ The non-code files in this section are in the `MecanimAnimation` subfolder.
 
 ## Scripting folder
 
-The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/08 - Animation`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Animation`.
 
 <figure markdown="span">
     ![animation_scripting.png](../../assets/images/animation_scripting.png)

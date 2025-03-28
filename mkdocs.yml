@@ -35,23 +35,21 @@ nav:
   - Unity Editor: unity-editor.md
   - Assets: assets.md
   - Scenes: scenes.md
-  - Scripting:
-    - scripting/index.md
-    - Systems:
-      - scripting/systems/index.md
-      - Game: scripting/systems/game.md
-      - Player: scripting/systems/player.md
-      - Input: scripting/systems/input.md
-      - User Interface: scripting/systems/user-interface.md
-      - Audio: scripting/systems/audio.md
-      - Environment: scripting/systems/environment.md
-      - Unit: scripting/systems/unit.md
-      - Animation: scripting/systems/animation.md
-      - Action: scripting/systems/action.md
-      - Command: scripting/systems/command.md
-      - Ability: scripting/systems/ability.md
-      - Hitbox: scripting/systems/hitbox.md
-    - Utilities: scripting/utilities.md
+  - Systems:
+    - systems/index.md
+    - Ability: systems/ability.md
+    - Action: systems/action.md
+    - Animation: systems/animation.md
+    - Audio: systems/audio.md
+    - Command: systems/command.md
+    - Environment: systems/environment.md
+    - Game: systems/game.md
+    - Hitbox: systems/hitbox.md
+    - Input: systems/input.md
+    - Player: systems/player.md
+    - UI: systems/ui.md
+    - Unit: systems/unit.md
+    - Utilities: systems/utilities.md
 
 markdown_extensions:
   - attr_list

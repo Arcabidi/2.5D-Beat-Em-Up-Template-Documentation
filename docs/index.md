@@ -33,9 +33,7 @@ This package combines 2D visuals with 3D depth to add a modern feel to the class
 - [__Unity Editor__](unity-editor.md)<br>understand how the project is organized in the Unity Editor
 - [__Assets__](assets.md)<br>learn how to dynamically load and unload items at runtime
 - [__Scenes__](scenes.md)<br>take control of how your game transitions between its sections
-- [__Scripting__](scripting/index.md)<br>create custom code to fit your game's needs
-- [__Systems__](scripting/systems/index.md)<br>deep dive into the twelve game systems that power the template
-- [__Utilities__](scripting/utilities.md)<br>supplementary code that can be used for any game when needed
+- [__Systems__](systems/index.md)<br>deep dive into the systems that power the template
 </div>
 
 ## Required packages

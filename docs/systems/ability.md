@@ -6,7 +6,7 @@
 
 ## Scripting
 
-All code files below are at `BeatEmUpTemplate/Assets/Scripting/Systems/11 - Ability`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Ability`.
 
 <figure markdown="span">
     ![ability_scripting.png](../../assets/images/ability_scripting.png)
@@ -14,7 +14,7 @@ All code files below are at `BeatEmUpTemplate/Assets/Scripting/Systems/11 - Abil
 
 ### CSharp
 
-These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked or are abstract classes representing concepts.
 
 #### AbilityData
 

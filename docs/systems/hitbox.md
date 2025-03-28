@@ -6,7 +6,7 @@
     
 ## Scripting
 
-All code files below are at `BeatEmUpTemplate/Assets/Scripting/Systems/12 - Hitbox`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Hitbox`.
 
 <figure markdown="span">
     ![hitbox_scripting.png](../../assets/images/hitbox_scripting.png)

@@ -20,7 +20,7 @@ For this template we have opted not to use Unity's default Player Input Manager 
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/02 - Player`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Player`.
 
 <figure markdown="span">
     ![player_scripting.png](../../assets/images/player_scripting.png)
@@ -28,7 +28,7 @@ The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems
 
 ### CSharp
 
-These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked, or are abstract classes representing concepts.
+These scripts are not meant to be attached to GameObjects in the scene. Many of them represent static event classes that are meant to be invoked or are abstract classes representing concepts.
 
 #### HumanPlayerEvents
 

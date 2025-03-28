@@ -6,7 +6,7 @@
 
 ## Scripting
 
-The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Systems/06 - Environment`.
+The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Environment`.
 
 <figure markdown="span">
     ![environment_scripting.png](../../assets/images/environment_scripting.png)
