@@ -2,11 +2,11 @@
 
 !!! Summary
 
-    This page outlines the core systems that make up the 2.5D Beat 'Em Up Template.
+    This page outlines the twelve core systems that make up the 2.5D Beat 'Em Up Template.
 
 ## Overview
 
-There are 13 total systems that contribute to the template's core functionality. Some systems are made entirely out of code files while others have both code and non-code aspects. See each system's dedicated page for more information.
+Some systems are made entirely out of code files while others have both code and non-code elements. See each system's dedicated page for more information.
 
 <div class="grid cards" markdown>
 - [__Ability__](ability.md)<br>everything and anything units can do
