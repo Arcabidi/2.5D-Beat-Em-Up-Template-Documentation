@@ -13,7 +13,7 @@ This template makes the following design decisions regarding the default way Uni
 This project uses Unity's default built-in animation system, known as the [Mecanim Animation system](https://docs.unity3d.com/Manual/AnimationOverview.html), to bring its in-game units to life.
 
 <figure markdown="span">
-    ![animation_system.png](../../assets/images/animation_system.png)
+    ![animation_system.png](../assets/images/animation_system.png)
 </figure>
 
 ## Animation folder
@@ -21,7 +21,7 @@ This project uses Unity's default built-in animation system, known as the [Mecan
 The non-code files in this section are at `BeatEmUpTemplate/Assets/Animation`.
 
 <figure markdown="span">
-    ![animation_animation_folder.png](../../assets/images/animation_animation_folder.png)
+    ![animation_animation_folder.png](../assets/images/animation_animation_folder.png)
 </figure>
 
 ### MecanimAnimation
@@ -31,7 +31,7 @@ The non-code files in this section are in the `MecanimAnimation` subfolder.
 #### AnimationClips
 
 <figure markdown="span">
-    ![animationclips.png](../../assets/images/animationclips.png)
+    ![animationclips.png](../assets/images/animationclips.png)
 </figure>
 
 [AnimationClips](https://docs.unity3d.com/Manual/AnimationClips.html) are imported from an external source or created within Unity. They are then placed and arranged in an AnimatorController.
@@ -39,7 +39,7 @@ The non-code files in this section are in the `MecanimAnimation` subfolder.
 #### AnimatorControllers
 
 <figure markdown="span">
-    ![animatorcontrollers.png](../../assets/images/animatorcontrollers.png)
+    ![animatorcontrollers.png](../assets/images/animatorcontrollers.png)
 </figure>
 
 [AnimatorControllers](https://docs.unity3d.com/Manual/class-AnimatorController.html) use state machines to determine what [AnimationClip](https://docs.unity3d.com/Manual/AnimationClips.html) to play. They are referenced by the [Animator](https://docs.unity3d.com/Manual/class-Animator.html) components on the Hero and Villain prefabs. 
@@ -49,7 +49,7 @@ The non-code files in this section are in the `MecanimAnimation` subfolder.
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Animation`.
 
 <figure markdown="span">
-    ![animation_scripting.png](../../assets/images/animation_scripting.png)
+    ![animation_scripting.png](../assets/images/animation_scripting.png)
 </figure>
 
 ### StateMachineBehaviours
@@ -64,7 +64,7 @@ classDiagram
     }
 ```
 
-`BoolClearedByIPauseAnimatorUnpauseAnimator.cs` defines a bool parameter to be cleared if the UnpauseAnimator event is fired by an [IPauseAnimator](../utilities.md#ipauseanimator) interface implementation.
+`BoolClearedByIPauseAnimatorUnpauseAnimator.cs` defines a bool parameter to be cleared if the UnpauseAnimator event is fired by an [IPauseAnimator](utilities.md#ipauseanimator) interface implementation.
 
 #### BoolSetByAbility
 
@@ -74,7 +74,7 @@ classDiagram
     }
 ```
 
-`BoolSetByAbility.cs` define a bool parameter to be set if the SetAnimationBool event is fired by an [IRaiseSetAnimationBool](../utilities.md#iraisesetanimationbool) interface implementation. It also listens for when new abilities are added via a unit's [AbilityResponder](ability.md#abilityresponders).
+`BoolSetByAbility.cs` define a bool parameter to be set if the SetAnimationBool event is fired by an [IRaiseSetAnimationBool](utilities.md#iraisesetanimationbool) interface implementation. It also listens for when new abilities are added via a unit's [AbilityManager](ability.md#abilitymanagers).
 
 #### BoolSetByIDamageableDamaged
 
@@ -84,7 +84,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIDamageableDamaged.cs` defines a bool parameter to be set if the Damaged event is fired by an [IDamageable](../utilities.md#idamageable) interface implementation.
+`BoolSetByIDamageableDamaged.cs` defines a bool parameter to be set if the Damaged event is fired by an [IDamageable](utilities.md#idamageable) interface implementation.
 
 #### BoolSetByIDamageableDamagedBack
 
@@ -94,7 +94,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIDamageableDamagedBack.cs` defines a bool parameter to be set if the DamagedBack event is fired by an [IDamageable](../utilities.md#idamageable) interface implementation.
+`BoolSetByIDamageableDamagedBack.cs` defines a bool parameter to be set if the DamagedBack event is fired by an [IDamageable](utilities.md#idamageable) interface implementation.
 
 #### BoolSetByIDefeatableDefeated
 
@@ -104,7 +104,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIDefeatableDefeated.cs` defines a bool parameter to be set if the Defeated event is fired by an [IDefeatable](../utilities.md#idefeatable) interface implementation.
+`BoolSetByIDefeatableDefeated.cs` defines a bool parameter to be set if the Defeated event is fired by an [IDefeatable](utilities.md#idefeatable) interface implementation.
 
 #### BoolSetByIDefeatableDefeatedBack
 
@@ -114,7 +114,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIDefeatableDefeatedBack.cs` defines a bool parameter to be set if the DefeatedBack event is fired by an [IDefeatable](../utilities.md#idefeatable) interface implementation.
+`BoolSetByIDefeatableDefeatedBack.cs` defines a bool parameter to be set if the DefeatedBack event is fired by an [IDefeatable](utilities.md#idefeatable) interface implementation.
 
 #### BoolSetByIPauseAnimatorPauseAnimator
 
@@ -124,7 +124,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIPauseAnimatorPauseAnimator.cs` defines a bool parameter to be set if the PauseAnimator event is fired by an [IPauseAnimator](../utilities.md#ipauseanimator) interface implementation.
+`BoolSetByIPauseAnimatorPauseAnimator.cs` defines a bool parameter to be set if the PauseAnimator event is fired by an [IPauseAnimator](utilities.md#ipauseanimator) interface implementation.
 
 #### BoolSetByIRaiseMoveExecutedMovement
 
@@ -134,7 +134,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIRaiseMoveExecutedMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a non-zero vector by an [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+`BoolSetByIRaiseMoveExecutedMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a non-zero vector by an [IRaiseMoveExecuted](utilities.md#iraisemoveexecuted) interface implementation.
 
 #### BoolSetByIRaiseMoveExecutedNoMovement
 
@@ -144,7 +144,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIRaiseMoveExecutedNoMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a zero vector by an [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+`BoolSetByIRaiseMoveExecutedNoMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a zero vector by an [IRaiseMoveExecuted](utilities.md#iraisemoveexecuted) interface implementation.
 
 #### BoolSetByIRaiseMoveExecutedNonPositiveYMovement
 
@@ -154,7 +154,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIRaiseMoveExecutedNonPositiveYMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a non-positive y-vector by an [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+`BoolSetByIRaiseMoveExecutedNonPositiveYMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a non-positive y-vector by an [IRaiseMoveExecuted](utilities.md#iraisemoveexecuted) interface implementation.
 
 #### BoolSetByIRaiseMoveExecutedPositiveYMovement
 
@@ -164,7 +164,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIRaiseMoveExecutedPositiveYMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a positive y-vector by an [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+`BoolSetByIRaiseMoveExecutedPositiveYMovement.cs` defines a bool parameter to be set if the MoveExecuted event is fired with a positive y-vector by an [IRaiseMoveExecuted](utilities.md#iraisemoveexecuted) interface implementation.
 
 #### BoolSetByIRaiseWonWon
 
@@ -174,7 +174,7 @@ classDiagram
     }
 ```
 
-`BoolSetByIRaiseWonWon.cs` defines a bool parameter to be set if the Won event is fired by an [IRaiseWon](../utilities.md#iraisewon) interface implementation.
+`BoolSetByIRaiseWonWon.cs` defines a bool parameter to be set if the Won event is fired by an [IRaiseWon](utilities.md#iraisewon) interface implementation.
 
 #### BoolSetByJumpAbility
 
@@ -217,7 +217,7 @@ classDiagram
     }
 ```
 
-`BoolsSetByIRaiseMoveExecutedNoMovement.cs` defines multiple bool parameters to be set when the MoveExecuted event is fired with a zero vector by an [IRaiseMoveExecuted](../utilities.md#iraisemoveexecuted) interface implementation.
+`BoolsSetByIRaiseMoveExecutedNoMovement.cs` defines multiple bool parameters to be set when the MoveExecuted event is fired with a zero vector by an [IRaiseMoveExecuted](utilities.md#iraisemoveexecuted) interface implementation.
 
 #### BoolsSetOnStateExited
 

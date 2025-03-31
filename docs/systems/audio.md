@@ -9,7 +9,7 @@
 The non-code files in this section are located at `BeatEmUpTemplate/Assets/Audio`.
 
 <figure markdown="span">
-    ![audio_audio_folder.png](../../assets/images/audio_audio_folder.png)
+    ![audio_audio_folder.png](../assets/images/audio_audio_folder.png)
 </figure>
 
 Each subfolder is named after the source of the [AudioClips](https://docs.unity3d.com/Manual/class-AudioClip.html) inside.
@@ -19,7 +19,7 @@ Each subfolder is named after the source of the [AudioClips](https://docs.unity3
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Audio`.
 
 <figure markdown="span">
-    ![audio_scripting.png](../../assets/images/audio_scripting.png)
+    ![audio_scripting.png](../assets/images/audio_scripting.png)
 </figure>
 
 ### CSharp
@@ -59,7 +59,7 @@ AudioManagers manage the background music and sound effects within a scene.
 
 `PersistentAudioManager.cs` defines AudioManager behaviour unique to the Persistent scene, like playing sound effects when the mouse enters a [Button](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.Button.html). This component can be found attached to the AudioManager GameObject in the Persistent scene.
 
-`BootAudioManager.cs` defines AudioManager behaviour unique to the Boot scene, like playing sound effects when the Company Logo video player starts. This component can be found attached to the AudioManager GameObject in the Boot scene.
+`BootAudioManager.cs` defines AudioManager behaviour unique to the Boot scene, like playing sound effects when sections of the Company Logo are displayed. This component can be found attached to the AudioManager GameObject in the Boot scene.
 
 `TitleAudioManager.cs` defines AudioManager behaviour unique to the Title scene, like playing sound effects when a coin is first inserted. This component can be found attached to the AudioManager GameObject in the Title scene.
 

@@ -19,13 +19,13 @@ In 2020 Unity released a new input system called the [Input System package](http
     Unity currently [recommends using the new Input System package](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.13/manual/index.html#:~:text=It%27s%20intended%20to%20be%20a%20replacement%20for%20Unity%27s%20classic%20Input%20Manager) since they plan on removing the legacy Input Manager in the future.
 
 <figure markdown="span">
-    ![input_system_package_1.png](../../assets/images/input_system_package_1.png)
+    ![input_system_package_1.png](../assets/images/input_system_package_1.png)
 </figure>
 
  This template uses Unity's new Input System package. See Unity’s sample project [Warriors](https://unity.com/blog/technology/learn-the-input-system-with-updated-tutorials-and-our-sample-project-warriors) for a full demonstration of the Input System’s tools and functionality.<br>
 
 <figure markdown="span">
-    ![input_system_package_2.png](../../assets/images/input_system_package_2.png)
+    ![input_system_package_2.png](../assets/images/input_system_package_2.png)
 </figure>
 
 ## Input folder
@@ -33,7 +33,7 @@ In 2020 Unity released a new input system called the [Input System package](http
 The non-code files in this section are at `BeatEmUpTemplate/Assets/WorkingInUnity/Input`.
 
 <figure markdown="span">
-    ![input_input_folder.png](../../assets/images/input_input_folder.png)
+    ![input_input_folder.png](../assets/images/input_input_folder.png)
 </figure>
 
 ### InputSystem
@@ -43,7 +43,7 @@ The non-code files in this section are in the `InputSystem` subfolder.
 #### InputActionAsset
 
 <figure markdown="span">
-    ![inputactionasset.png](../../assets/images/inputactionasset.png)
+    ![inputactionasset.png](../assets/images/inputactionasset.png)
 </figure>
 
 `Controls.inputactions`is an [InputActionAsset](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputActionAsset.html) file that contains a set of Input Actions definitions and their associated Bindings and Control Schemes.
@@ -51,7 +51,7 @@ The non-code files in this section are in the `InputSystem` subfolder.
 #### InputSettings
 
 <figure markdown="span">
-    ![inputsettings.png](../../assets/images/inputsettings.png)
+    ![inputsettings.png](../assets/images/inputsettings.png)
 </figure>
 
 `InputSystem.inputsettings` is an [InputSettings](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Settings.html) file that represents the Input System configuration for the template. You can edit this configuration manually at `Edit/Project Settings/Input System Package/Settings`.
@@ -61,7 +61,7 @@ The non-code files in this section are in the `InputSystem` subfolder.
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Input`.
 
 <figure markdown="span">
-    ![input_scripting.png](../../assets/images/input_scripting.png)
+    ![input_scripting.png](../assets/images/input_scripting.png)
 </figure>
 
 ### CSharp

@@ -13,7 +13,7 @@ This template makes the following design decisions regarding the default way Uni
 Unity's local player system is managed through their Input System package by a component called the [Player Input Manager](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.13/manual/PlayerInputManager.html). It automatically manages the creation and lifetime of [PlayerInput](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.13/manual/PlayerInput.html) instances as players join and leave the game.
 
 <figure markdown="span">
-    ![player_input_manager.png](../../assets/images/player_input_manager.png)
+    ![player_input_manager.png](../assets/images/player_input_manager.png)
 </figure>
 
 For this template we have opted not to use Unity's default Player Input Manager component. This is because we want our human players and AI players to be handled separately. This template uses [custom PlayerManagers](#playermanagers) for this purpose. Virtual devices are created for AI players so that their inputs can be handled the same way as human players.
@@ -23,7 +23,7 @@ For this template we have opted not to use Unity's default Player Input Manager 
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Player`.
 
 <figure markdown="span">
-    ![player_scripting.png](../../assets/images/player_scripting.png)
+    ![player_scripting.png](../assets/images/player_scripting.png)
 </figure>
 
 ### CSharp

@@ -9,7 +9,7 @@
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Action`.
 
 <figure markdown="span">
-    ![action_scripting.png](../../assets/images/action_scripting.png)
+    ![action_scripting.png](../assets/images/action_scripting.png)
 </figure>
 
 ### MonoBehaviours

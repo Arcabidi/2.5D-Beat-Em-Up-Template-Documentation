@@ -9,7 +9,7 @@
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Hitbox`.
 
 <figure markdown="span">
-    ![hitbox_scripting.png](../../assets/images/hitbox_scripting.png)
+    ![hitbox_scripting.png](../assets/images/hitbox_scripting.png)
 </figure>
 
 ### Enums

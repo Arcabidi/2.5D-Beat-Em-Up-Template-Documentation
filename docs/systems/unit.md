@@ -9,7 +9,7 @@
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Unit`.
 
 <figure markdown="span">
-    ![unit_scripting.png](../../assets/images/unit_scripting.png)
+    ![unit_scripting.png](../assets/images/unit_scripting.png)
 </figure>
 
 ### CSharp

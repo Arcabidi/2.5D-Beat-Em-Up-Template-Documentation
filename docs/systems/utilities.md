@@ -24,7 +24,7 @@ classDiagram
     }
 ```
 
-`ActionWrapper.cs` is used by [PersistentGameManager](systems/game.md#gamemanagers) to define the EventLinks in its StateMachine. It essentially connects two nodes in the StateMachine through subscriptions to [GameEvents](systems/game.md#gameevents).
+`ActionWrapper.cs` is used by [PersistentGameManager](game.md#gamemanagers) to define the EventLinks in its StateMachine. It essentially connects two nodes in the StateMachine through subscriptions to [GameEvents](game.md#gameevents).
 
 #### StateMachine
 
@@ -34,7 +34,7 @@ classDiagram
     }
 ```
 
-`StateMachine.cs` represents a basic, general-purpose state machine. It is used by [PersistentGameManager](systems/game.md#gamemanagers) to represent the game's state.
+`StateMachine.cs` represents a basic, general-purpose state machine. It is used by [PersistentGameManager](game.md#gamemanagers) to represent the game's state.
 
 ##### ILink
 
@@ -56,7 +56,7 @@ classDiagram
     }
 ```
 
-`IState.cs` is used by [PersistentGameManager](systems/game.md#gamemanagers) to create custom states for a StateMachine.
+`IState.cs` is used by [PersistentGameManager](game.md#gamemanagers) to create custom states for a StateMachine.
 
 ##### EventLink
 
@@ -68,7 +68,7 @@ classDiagram
 
 EventLinks are used to connect nodes in a StateMachine.
 
-`EventLink.cs` is used by [PersistentGameManager](systems/game.md#gamemanagers) to link the paused and running game states.
+`EventLink.cs` is used by [PersistentGameManager](game.md#gamemanagers) to link the paused and running game states.
 
 ##### States
 
@@ -104,7 +104,7 @@ classDiagram
     }
 ```
 
-`ICanFace.cs` is implemented by classes that can face a specific [Direction](systems/game.md#direction). It is implemented by [VillainController](systems/unit.md#unitcontrollers) so that [BasicEnemyAI](systems/player.md#ais) can control the direction the unit faces.
+`ICanFace.cs` is implemented by classes that can face a specific [Direction](game.md#direction). It is implemented by [VillainController](unit.md#unitcontrollers) so that [BasicEnemyAI](player.md#ais) can control the direction the unit faces.
 
 #### ICanMove
 
@@ -115,7 +115,7 @@ classDiagram
     }
 ```
 
-`ICanMove.cs` is implemented by classes that can move conditionally. It is implemented by [UnitController](systems/unit.md#unitcontrollers) so that [BeltScrollMove](systems/ability.md#abilities) can know if the unit can currently move.
+`ICanMove.cs` is implemented by classes that can move conditionally. It is implemented by [UnitController](unit.md#unitcontrollers) so that [BeltScrollMove](ability.md#abilities) can know if the unit can currently move.
 
 #### ICanStop
 
@@ -126,7 +126,7 @@ classDiagram
     }
 ```
 
-`ICanStop.cs` is implemented by classes that can stop. It is implemented by [BeltScrollMove](systems/ability.md#abilities) so that [UnitController](systems/unit.md#unitcontrollers) can stop the unit from moving when needed.
+`ICanStop.cs` is implemented by classes that can stop. It is implemented by [BeltScrollMove](ability.md#abilities) so that [UnitController](unit.md#unitcontrollers) can stop the unit from moving when needed.
 
 #### IDamageable
 
@@ -137,7 +137,7 @@ classDiagram
     }
 ```
 
-`IDamageable.cs` is implemented by classes that are damageable. It is implemented by [UnitController](systems/unit.md#unitcontrollers) to notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the unit was damaged so that the animation state machine can update accordingly.
+`IDamageable.cs` is implemented by classes that are damageable. It is implemented by [UnitController](unit.md#unitcontrollers) to notify [StateMachineBehaviours](animation.md#statemachinebehaviours) that the unit was damaged so that the animation state machine can update accordingly.
 
 #### IDefeatable
 
@@ -148,7 +148,7 @@ classDiagram
     }
 ```
 
-`IDefeatable.cs` is implemented by classes that are defeatable. It is implemented by [UnitController](systems/unit.md#unitcontrollers) to notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the unit was defeated so that the animation state machine can update accordingly.
+`IDefeatable.cs` is implemented by classes that are defeatable. It is implemented by [UnitController](unit.md#unitcontrollers) to notify [StateMachineBehaviours](animation.md#statemachinebehaviours) that the unit was defeated so that the animation state machine can update accordingly.
 
 #### IHaveDamage
 
@@ -159,7 +159,7 @@ classDiagram
     }
 ```
 
-`IHaveDamage.cs` is implemented by classes that have damage. It is implemented by [JabAbilityData](systems/ability.md#abilitydata) and [CrossAbilityData](systems/ability.md#abilitydata) so that a target's [HurtResponder](systems/hitbox.md#hurtresponders) knows that it has to process damage as part of its hurt response.
+`IHaveDamage.cs` is implemented by classes that have damage. It is implemented by [JabAbilityData](ability.md#abilitydata) and [CrossAbilityData](ability.md#abilitydata) so that a target's [HurtResponder](hitbox.md#hurtresponders) knows that it has to process damage as part of its hurt response.
 
 #### IHaveDirection
 
@@ -170,7 +170,7 @@ classDiagram
     }
 ```
 
-`IHaveDirection.cs` is implemented by classes that have [Direction](systems/game.md#direction). It is implemented by [UnitController](systems/unit.md#unitcontrollers) so that [JabHitbox](systems/hitbox.md#hitboxes) and [CrossHitbox](systems/hitbox.md#hitboxes) know what direction to perform their boxcasts when getting hit info from a collision.
+`IHaveDirection.cs` is implemented by classes that have [Direction](game.md#direction). It is implemented by [UnitController](unit.md#unitcontrollers) so that [JabHitbox](hitbox.md#hitboxes) and [CrossHitbox](hitbox.md#hitboxes) know what direction to perform their boxcasts when getting hit info from a collision.
 
 #### IHaveFloatingHealthBar
 
@@ -181,7 +181,7 @@ classDiagram
     }
 ```
 
-`IHaveFloatingHealthBar.cs` is implemented by classes that have a floating health bar transform. It is implemented by [VillainController](systems/unit.md#unitcontrollers) so that [FloatingHealthBarController](systems/user-interface.md#floatinghealthbarcontrollers) knows where to position the unit's floating health bar.
+`IHaveFloatingHealthBar.cs` is implemented by classes that have a floating health bar transform. It is implemented by [VillainController](unit.md#unitcontrollers) so that [FloatingHealthBarController](ui.md#floatinghealthbarcontrollers) knows where to position the unit's floating health bar.
 
 #### IHaveHitStun
 
@@ -192,7 +192,7 @@ classDiagram
     }
 ```
 
-`IHaveHitStun.cs` is implemented by classes that have hitstun. It is implemented by [JabAbilityData](systems/ability.md#abilitydata) and [CrossAbilityData](systems/ability.md#abilitydata) so that a target's [HurtResponder](systems/hitbox.md#hurtresponders) knows that it has to process hitstun as part of its hurt response.
+`IHaveHitStun.cs` is implemented by classes that have hitstun. It is implemented by [JabAbilityData](ability.md#abilitydata) and [CrossAbilityData](ability.md#abilitydata) so that a target's [HurtResponder](hitbox.md#hurtresponders) knows that it has to process hitstun as part of its hurt response.
 
 #### IHaveHurtboxes
 
@@ -203,7 +203,7 @@ classDiagram
     }
 ```
 
-`IHaveHurtboxes.cs` is implemented by classes that have hurtboxes. It is implemented by [HeroController](systems/unit.md#unitcontrollers) so that [BasicEnemyAI](systems/player.md#ais) can calculate the closest possible target hurtbox.
+`IHaveHurtboxes.cs` is implemented by classes that have hurtboxes. It is implemented by [HeroController](unit.md#unitcontrollers) so that [BasicEnemyAI](player.md#ais) can calculate the closest possible target hurtbox.
 
 #### IHaveHurtboxMask
 
@@ -214,7 +214,7 @@ classDiagram
     }
 ```
 
-`IHaveHurtboxMask.cs` is implemented by classes that have a hurtbox mask. It is implemented by [UnitController](systems/unit.md#unitcontrollers) so that [JabHitbox](systems/hitbox.md#hitboxes) and [CrossHitbox](systems/hitbox.md#hitboxes) know what type of hurtbox they collide with when active.
+`IHaveHurtboxMask.cs` is implemented by classes that have a hurtbox mask. It is implemented by [UnitController](unit.md#unitcontrollers) so that [JabHitbox](hitbox.md#hitboxes) and [CrossHitbox](hitbox.md#hitboxes) know what type of hurtbox they collide with when active.
 
 #### IHaveKnockback
 
@@ -225,10 +225,10 @@ classDiagram
     }
 ```
 
-`IHaveKnockback.cs` is implemented by classes that have knockback. It is implemented by [JabAbilityData](systems/ability.md#abilitydata) and [CrossAbilityData](systems/ability.md#abilitydata) for two reasons:
+`IHaveKnockback.cs` is implemented by classes that have knockback. It is implemented by [JabAbilityData](ability.md#abilitydata) and [CrossAbilityData](ability.md#abilitydata) for two reasons:
 
-1. So that [JabHitbox](systems/hitbox.md#hitboxes) and [CrossHitbox](systems/hitbox.md#hitboxes) can assign knockback direction after a collision based on hit info.
-2. So that a target's [HurtResponder](systems/hitbox.md#hurtresponders) knows that it has to process knockback as part of its hurt response.
+1. So that [JabHitbox](hitbox.md#hitboxes) and [CrossHitbox](hitbox.md#hitboxes) can assign knockback direction after a collision based on hit info.
+2. So that a target's [HurtResponder](hitbox.md#hurtresponders) knows that it has to process knockback as part of its hurt response.
 
 #### IHaveMaximumHealth
 
@@ -243,14 +243,14 @@ classDiagram
     }
 ```
 
-`IHaveMaximumHealth.cs` is implemented by classes that have maximum health. It is implemented by [UnitStats](systems/unit.md#unitstats) so that a [UnitController](systems/unit.md#unitcontrollers) can initialize its [HealthBehaviour](systems/unit.md#unitbehaviours) with the correct maximum health.
+`IHaveMaximumHealth.cs` is implemented by classes that have maximum health. It is implemented by [UnitStats](unit.md#unitstats) so that a [UnitController](unit.md#unitcontrollers) can initialize its [HealthBehaviour](unit.md#unitbehaviours) with the correct maximum health.
 
 ##### IHealth
 
-`IHealth.cs` is implemented by classes that have health. It is implemented by [UnitController](systems/unit.md#unitcontrollers) for two reasons:
+`IHealth.cs` is implemented by classes that have health. It is implemented by [UnitController](unit.md#unitcontrollers) for two reasons:
 
-1. So that [GameplayScreenController](systems/user-interface.md#screencontrollers) can initialize the Hero's health bar with the correct current and maximum health.
-2. So that [FloatingHealthBarManager](systems/user-interface.md#floatinghealthbarmanagers) can initialize the Villain's floating health bar with the correct current and maximum health.
+1. So that [GameplayScreenController](ui.md#screencontrollers) can initialize the Hero's health bar with the correct current and maximum health.
+2. So that [FloatingHealthBarManager](ui.md#floatinghealthbarmanagers) can initialize the Villain's floating health bar with the correct current and maximum health.
 
 #### IHaveName
 
@@ -261,7 +261,7 @@ classDiagram
     }
 ```
 
-`IHaveName.cs` is implemented by classes that have a name. It is implemented by [UnitController](systems/unit.md#unitcontrollers) so that [UnitActionManager](systems/action.md#unitactionmanagers) can out output debug logs when attempting to perform [UnitActions](systems/action.md#unitactions).
+`IHaveName.cs` is implemented by classes that have a name. It is implemented by [UnitController](unit.md#unitcontrollers) so that [UnitActionManager](action.md#unitactionmanagers) can out output debug logs when attempting to perform [UnitActions](action.md#unitactions).
 
 #### IHaveRange
 
@@ -272,7 +272,7 @@ classDiagram
     }
 ```
 
-`IHaveRange.cs` is implemented by classes that have range. It is implemented by [JabUnitAction](systems/action.md#unitactions) and [CrossUnitAction](systems/action.md#unitactions) so that [BasicEnemyAI](systems/player.md#ais) knows the maximum range at which to position itself in order to hit with the edge of an ability.
+`IHaveRange.cs` is implemented by classes that have range. It is implemented by [JabUnitAction](action.md#unitactions) and [CrossUnitAction](action.md#unitactions) so that [BasicEnemyAI](player.md#ais) knows the maximum range at which to position itself in order to hit with the edge of an ability.
 
 #### IHaveWalkSpeed
 
@@ -283,10 +283,10 @@ classDiagram
     }
 ```
 
-`IHaveWalkSpeed.cs` is implemented by classes that have walk speed. It is implemented by [UnitStats](systems/unit.md#unitstats) and [UnitController](systems/unit.md#unitcontrollers) for two reasons:
+`IHaveWalkSpeed.cs` is implemented by classes that have walk speed. It is implemented by [UnitStats](unit.md#unitstats) and [UnitController](unit.md#unitcontrollers) for two reasons:
 
-1. So that [TrainingAIPlayerUnitManager](systems/unit.md#unitmanagers) can randomize Villain walk speeds within a set range of their base walk speed.
-2. So that each instance of [BeltScrollMove](systems/ability.md#abilities) can set its internal walk speed via [BeltScrollMoveUnitAction](systems/action.md#unitactions).
+1. So that [TrainingAIPlayerUnitManager](unit.md#unitmanagers) can randomize Villain walk speeds within a set range of their base walk speed.
+2. So that each instance of [BeltScrollMove](ability.md#abilities) can set its internal walk speed via [BeltScrollMoveUnitAction](action.md#unitactions).
 
 #### IPausable
 
@@ -297,7 +297,7 @@ classDiagram
     }
 ```
 
-`IPausable.cs` is implemented by classes that are pausable. It is implemented by [BeltScrollMove](systems/ability.md#abilities) to allow a [UnitController](systems/unit.md#unitcontrollers) to pause and unpause its behavior.
+`IPausable.cs` is implemented by classes that are pausable. It is implemented by [BeltScrollMove](ability.md#abilities) to allow a [UnitController](unit.md#unitcontrollers) to pause and unpause its behavior.
 
 #### IPauseAnimator
 
@@ -308,7 +308,7 @@ classDiagram
     }
 ```
 
-`IPauseAnimator.cs` is implemented by classes that can pause the animator. It is implemented by [UnitController](systems/unit.md#unitcontrollers) to notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the unit was paused so that the animation state machine can update accordingly.
+`IPauseAnimator.cs` is implemented by classes that can pause the animator. It is implemented by [UnitController](unit.md#unitcontrollers) to notify [StateMachineBehaviours](animation.md#statemachinebehaviours) that the unit was paused so that the animation state machine can update accordingly.
 
 #### IRaiseMoveExecuted
 
@@ -319,10 +319,10 @@ classDiagram
     }
 ```
 
-`IRaiseMoveExecuted.cs` is implemented by classes that raise a move executed event. It is implemented by [BeltScrollMove](systems/ability.md#abilities) for two reasons:
+`IRaiseMoveExecuted.cs` is implemented by classes that raise a move executed event. It is implemented by [BeltScrollMove](ability.md#abilities) for two reasons:
 
-1. So that [HeroController](systems/unit.md#unitcontrollers) can have the unit face the direction it is moving.
-2. To notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the unit is moving so that the animation state machine can update accordingly.
+1. So that [HeroController](unit.md#unitcontrollers) can have the unit face the direction it is moving.
+2. To notify [StateMachineBehaviours](animation.md#statemachinebehaviours) that the unit is moving so that the animation state machine can update accordingly.
 
 #### IRaiseSetAnimationBool
 
@@ -333,7 +333,7 @@ classDiagram
     }
 ```
 
-`IRaiseSetAnimationBool.cs` is implemented by classes that set an animation bool. It is implemented by [Jab](systems/ability.md#abilities) and [Cross](systems/ability.md#abilities) to notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the user is executing an ability so that the animation state machine can update accordingly.
+`IRaiseSetAnimationBool.cs` is implemented by classes that set an animation bool. It is implemented by [Jab](ability.md#abilities) and [Cross](ability.md#abilities) to notify [StateMachineBehaviours](animation.md#statemachinebehaviours) that the user is executing an ability so that the animation state machine can update accordingly.
 
 #### IRaiseWon
 
@@ -344,7 +344,7 @@ classDiagram
     }
 ```
 
-`IRaiseWon.cs` is implemented by classes that raise a win. It is implemented by [UnitController](systems/unit.md#unitcontrollers) to notify [StateMachineBehaviours](systems/animation.md#statemachinebehaviours) that the unit has won so that the animation state machine can update accordingly.
+`IRaiseWon.cs` is implemented by classes that raise a win. It is implemented by [UnitController](unit.md#unitcontrollers) to notify [StateMachineBehaviours](animation.md#statemachinebehaviours) that the unit has won so that the animation state machine can update accordingly.
 
 ### MonoBehaviours
 
@@ -432,7 +432,7 @@ classDiagram
 ``` mermaid
 classDiagram
     class RenamePropertyDrawers{
-    }
+    }cls
 ```
 
 `RenamePropertyDrawer.cs` controls how the serializable RenameAttribute class looks in the inspector.

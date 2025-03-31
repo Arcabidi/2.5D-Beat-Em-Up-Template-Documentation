@@ -9,7 +9,7 @@
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Environment`.
 
 <figure markdown="span">
-    ![environment_scripting.png](../../assets/images/environment_scripting.png)
+    ![environment_scripting.png](../assets/images/environment_scripting.png)
 </figure>
 
 ### MonoBehaviours

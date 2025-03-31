@@ -9,7 +9,7 @@
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/Command`.
 
 <figure markdown="span">
-    ![command_scripting.png](../../assets/images/command_scripting.png)
+    ![command_scripting.png](../assets/images/command_scripting.png)
 </figure>
 
 ### CSharp

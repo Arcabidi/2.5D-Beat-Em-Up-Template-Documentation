@@ -25,7 +25,7 @@ In 2021 Unity released a new UI system called [UI Toolkit](https://docs.unity3d.
 This template uses Unity's new UI Toolkit system. See Unity’s sample projects [QuizU](https://assetstore.unity.com/packages/essentials/tutorial-projects/quizu-a-ui-toolkit-sample-268492) and [Dragon Crashers](https://assetstore.unity.com/packages/essentials/tutorial-projects/dragon-crashers-ui-toolkit-sample-project-231178) for a full demonstration of UI Toolkit's tools and functionality.<br>
 
 <figure markdown="span">
-    ![ui_toolkit.png](../../assets/images/ui_toolkit.png)
+    ![ui_toolkit.png](../assets/images/ui_toolkit.png)
 </figure>
 
 ### Cursor
@@ -39,7 +39,7 @@ To change this we have created our own [custom CursorController](#cursorcontroll
 The non-code files in this section are at `BeatEmUpTemplate/Assets/WorkingInUnity/UI`.
 
 <figure markdown="span">
-    ![ui_ui_folder.png](../../assets/images/ui_ui_folder.png)
+    ![ui_ui_folder.png](../assets/images/ui_ui_folder.png)
 </figure>
 
 ### UI Toolkit
@@ -49,7 +49,7 @@ The non-code files in this section are in the `UIToolkit` subfolder.
 #### Fonts
 
 <figure markdown="span">
-    ![fonts.png](../../assets/images/fonts.png)
+    ![fonts.png](../assets/images/fonts.png)
 </figure>
 
 Each font subfolder contains its license, its font, and its [font assets](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-font-asset.html). Font assets act as containers for fonts so that they can serve as the basis for variations without changing the original font.
@@ -59,7 +59,7 @@ This template only uses one font: [`PressStart2P-Regular.ttf`](https://fonts.goo
 #### PanelSettings
 
 <figure markdown="span">
-    ![panelsettings.png](../../assets/images/panelsettings.png)
+    ![panelsettings.png](../assets/images/panelsettings.png)
 </figure>
 
 [PanelSettings](https://docs.unity3d.com/Packages/com.unity.ui@1.0/api/UnityEngine.UIElements.PanelSettings.html) assets instantiate panels at runtime, where Unity displays UXML-file based UI in the Game view. [UIDocument](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UIDocument.html) components need a reference to a PanelSettings asset so that they know which panel to display their content on.
@@ -73,7 +73,7 @@ This template only uses one font: [`PressStart2P-Regular.ttf`](https://fonts.goo
 #### ThemeStyleSheets
 
 <figure markdown="span">
-    ![themestylesheets.png](../../assets/images/themestylesheets.png)
+    ![themestylesheets.png](../assets/images/themestylesheets.png)
 </figure>
 
  [ThemeStyleSheet](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-tss.html) files are USS files that Unity uses for management purposes. They are referenced by PanelSettings assets and applied to their panels.
@@ -93,7 +93,7 @@ VisualTrees representing entire scenes are referenced by the [UIDocument](https:
 The code files in this section are at `BeatEmUpTemplate/Assets/Scripting/UI`.
 
 <figure markdown="span">
-    ![ui_scripting.png](../../assets/images/ui_scripting.png)
+    ![ui_scripting.png](../assets/images/ui_scripting.png)
 </figure>
 
 ### CSharp
@@ -118,7 +118,7 @@ UIEvents contain all events related to the user interface.
 
 `PersistentUIEvents.cs` contains all UIEvents unique to the Persistent scene. This includes things like fade transitions which exist on the persistent level and can be invoked from any scene. 
 
-`BootUIEvents.cs` contains all UIEvents unique to the Boot scene. This includes things like signaling when the Company Logo video player has been prepared or when the Title scene has been successfully preloaded.
+`BootUIEvents.cs` contains all UIEvents unique to the Boot scene. This includes things like signaling when sections of the Company Logo have been displayed or when the Title scene has been successfully preloaded.
 
 `TitleUIEvents.cs` contains all UIEvents unique to the Title scene. This includes things like signaling when menu options are moused over or clicked.
 
@@ -132,21 +132,31 @@ UIEvents contain all events related to the user interface.
 
 ``` mermaid
 classDiagram
-    UIView <|-- FaderView
-    UIView <|-- SplashView
-    UIView <|-- MainMenuView
-    UIView <|-- OptionsView
-    UIView <|-- GameplayView
-    UIView <|-- PauseView
-    UIView <|-- ContinueView
-    UIView <|-- GameOverView
-    UIView <|-- CompleteView
+    UIView <|-- UGUIView
+    UIView <|-- UIToolkitView
+    UGUIView <|-- SplashView
+    UIToolkitView <|-- FaderView
+    UIToolkitView <|-- MainMenuView
+    UIToolkitView <|-- OptionsView
+    UIToolkitView <|-- GameplayView
+    UIToolkitView <|-- PauseView
+    UIToolkitView <|-- ContinueView
+    UIToolkitView <|-- GameOverView
+    UIToolkitView <|-- CompleteView
     class UIView{
+        <<Abstract>>
+    }
+    class UGUIView{
+        <<Abstract>>
+    }
+    class UIToolkitView{
         <<Abstract>>
     }
 ```
 
-UIViews contain the various [VisualElements](#visualelements) that make up the user interface for each screen. They communicate with their respective [ScreenController](#screencontrollers) using [UIEvents](#uievents) classes to create an interactive user interface.
+UIViews contain the various elements that make up the user interface for each screen. They communicate with their respective [ScreenController](#screencontrollers) using [UIEvents](#uievents) classes to create an interactive user interface.
+
+The UIView class has two direct children: UGUIView and UIToolkitView. These classes are used to create views for Unity's uGUI and UI Toolkit systems, respectively.
 
 | <div style="width:110px" /> UIView | Represents | Used by | Works with | Using |
 | ---------------: | :-------------- | :-------------- | :-------------- | :-------------- |
@@ -252,6 +262,20 @@ ScreenControllers control the logic of a screen used by a scene. This includes t
 
     For this template we've defined stages as scenes where the main gameplay takes place. For now this is just the Training scene, but the stage designation also includes any future levels.
 
+#### UGUIControllers
+
+UGUIControllers are components attached to a uGUI GameObject that represent its logic.
+
+##### CompanyLogoController
+
+``` mermaid
+classDiagram
+    class CompanyLogoController{
+    }
+```
+
+CompanyLogoController.cs is responsible for directing the animation of the company logo.
+
 #### UIManagers
 
 ``` mermaid
@@ -268,7 +292,7 @@ classDiagram
 
 UIManagers manage the lifetimes of [UIViews](#uiviews) within a scene. This includes things like creating, showing, and hiding screens when needed.
 
-`UIManager.cs` defines what is common across all UIManagers, regardless of game. This includes things like referencing a [UIDocument](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UIDocument.html) or maintaining a data structure that contains all the UIViews its managing.
+`UIManager.cs` defines what is common across all UIManagers, regardless of game. This includes things like referencing a [Canvas](https://docs.unity3d.com/Packages/com.unity.ugui@3.0/manual/UICanvas.html) (for uGUI) or [UIDocument](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UIDocument.html) (for UI Toolkit), and maintaining a data structure that contains all the UIViews its managing.
 
 `PersistentUIManager.cs` defines UIManager behaviour unique to the Persistent scene, like showing the Fader screen for fade-from or fade-to transitions. This component can be found attached to the UIManager GameObject in the Persistent scene.
 
