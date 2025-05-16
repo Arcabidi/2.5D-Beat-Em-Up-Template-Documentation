@@ -4,6 +4,23 @@
 
     This page describes how the Unity environment is organized for the template. It can help you navigate through the project’s files or bring up details you may want to consider when organizing your own game.
 
+## Automatic setup
+
+This package includes automatic setup features to ensure a smooth experience when importing into a Unity project. These scripts are located at `BeatEmUpTemplate/Assets/Scripting/Editor`.
+
+<figure markdown="span">
+    ![project_window.png](assets/images/automatic_setup.png)
+</figure>
+
+Once the import is detected `AutoSetupManager.cs` runs all setup tasks in sequence:
+
+1. Configures the Input System (`InputSystemSetup.cs`)
+2. Sets up URP assets (`URPAutoSetup.cs`)
+3. Opens the Initialization scene (`InitializationSceneOpener.cs`)
+4. Shows the Welcome screen (`WelcomeScreen.cs`)
+
+You can also manually run the setup by selecting `Window > Arcabidi > 2.5D Beat 'Em Up Template > Run Auto Setup`. See `AutoSetupGuide.txt` for more information.
+
 ## Project window
 
 <figure markdown="span">
@@ -30,8 +47,6 @@ The [Project window](https://docs.unity3d.com/Manual/ProjectView.html) is locate
 | `Scenes`            | Contains all non-code files related to scenes. See the [Scenes](scenes.md) page for more information. |
 | `UI`            | Contains all non-code files related to UI. See the [UI](systems/ui.md#ui-folder) page for more information.|
 | `Licenses`            | Contains all licenses associated with any third party assets used in the package. `Third-Party Notices.txt` details which asset uses which license. |
-| `Packages`            | Contains a`manifest.json` file that lists all package dependencies in the 2.5D Beat 'Em Up Template for reference. |
-| `ProjectSettings`            | Contains all [project settings](https://docs.unity3d.com/Manual/comp-ManagerGroup.html) for the 2.5D Beat 'Em Up Template:<br><br>`DynamicsManager` configures [physics collision matrices](https://docs.unity3d.com/Manual/LayerBasedCollision.html).<br>`EditorBuildSettings` sets the [scene list](https://docs.unity3d.com/6000.0/Documentation/Manual/build-profile-scene-list.html). <br>`GraphicsSettings` sets the [default render pipeline](https://docs.unity3d.com/Manual/class-GraphicsSettings.html#:~:text=Always%2Dincluded%20Shaders-,Set%20Default%20Render%20Pipeline%20Asset,-Use%20the%20Default).<br>`ProjectSettings` sets general project settings.<br>`QualitySettings` sets the [render pipeline asset](https://docs.unity3d.com/Manual/class-QualitySettings.html#:~:text=Meshes-,Rendering,-Property).<br>`TagManager` defines [tags and layers](https://docs.unity3d.com/Manual/class-TagManager.html).<br><br>It is recommended to import this package to a clean Unity project to prevent overwriting any existing project settings. After creating one, copy these files to the `[Your Project]/ProjectSettings` folder to overwrite the default project settings. |
 
 ## Hierarchy window
 

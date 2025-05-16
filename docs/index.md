@@ -36,15 +36,15 @@ This package combines 2D visuals with 3D depth to add a modern feel to the class
 - [__Systems__](systems/index.md)<br>deep dive into the systems that power the template
 </div>
 
-## Required packages
+## Package dependencies
 
 !!! Info
 
     This template only uses official packages made by Unity.
 
-* [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/index.html) (For player input. Installed by default in Unity 6.)
-* [UI Toolkit](https://docs.unity3d.com/6000.0/Documentation/Manual/UIElements.html) (For creating UI. Installed by default in Unity 6.)
-* [Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html) (For asset management. Install via `Windows > Package Manager`.)
+* [Addressables](https://docs.unity3d.com/Packages/com.unity.addressables@2.4/manual/index.html) (For asset management)
+* [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html) (For player input)
+* [Universal Render Pipeline](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.3/api/index.html) (For rendering)
 
 ## Downloads
 
